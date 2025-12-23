@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sodanセンター™ 専門スタッフログイン</title>
+  <link rel="shortcut icon" href="../favicon.ico">
+  <link rel="stylesheet" href="../style.css">
+  <script async data-id="101498171" src="//static.getclicky.com/js"></script>
+</head>
+<body>
+
+  <div style="text-align: center;">
+    <img src="../img/sodan-center.png" width="185" height="50">
+    <img src="../img/top.png" width="50" height="50">
+  </div>
+
+  <h1 style="text-align: center;">専門スタッフログイン</h1>
+  <hr>
+  <div style="max-width: 1024px; margin: 1rem auto; line-height: 1.8; color: #dd33ff; font-size: 10pt; text-align: left; padding: 0 1rem;">
+    資格審査に合格されたメールアドレスとパスワードをご入力ください。<br>
+    正式な専門スタッフとして承認されるまで、管理画面へのログイン権限は付与されません。<br>
+    ご不便をおかけしますが、何卒ご理解賜りますようお願い申し上げます。
+  </div>
+
+  <form id="loginForm" action="https://sodancenter.com/login/verification" method="POST" class="form" novalidate>
+
+    <label for="email">メールアドレス<span class="required-star">*</span></label>
+    <input type="email" id="email" name="email" placeholder="onamae@sodancenter.com" required>
+    <div id="emailError" class="error-message" style="display:none;">有効なメールアドレスを入力してください。</div>
+
+    <label for="password">パスワード<span class="required-star">*</span></label>
+    <input type="password" id="password" name="password" placeholder="パスワードを入力してください" required>
+    <div id="passwordError" class="error-message" style="display:none;">パスワードを入力してください。</div>
+
+    <input type="submit" value="ログイン">
+  </form>
+
+  <script>
+    const form = document.getElementById('loginForm');
+    const email = document.getElementById('email');
+    const password = document.getElementById('password');
+    const emailError = document.getElementById('emailError');
+    const passwordError = document.getElementById('passwordError');
+
+    form.addEventListener('submit', function(e) {
+      let valid = true;
+      emailError.style.display = 'none';
+      passwordError.style.display = 'none';
+
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!email.value.trim() || !emailPattern.test(email.value)) {
+        emailError.style.display = 'block';
+        valid = false;
+      }
+
+      if (!password.value.trim()) {
+        passwordError.style.display = 'block';
+        valid = false;
+      }
+
+      if (!valid) {
+        e.preventDefault();
+      }
+    });
+  </script>
+
+  <div class="copyright">
+    © 2025 Sodanセンター™ All rights reserved.
+  </div>
+
+</body>
+</html>
