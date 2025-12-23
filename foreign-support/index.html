@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SodanCenter...</title>
+  <link rel="alternate" hreflang="x-default" href="https://sodancenter.com/en/foreign-support">
+  <link rel="alternate" hreflang="ja" href="https://sodancenter.com/ja/foreign-support">
+  <link rel="icon" href="favicon.ico">
+</head>
+<body>
+  <noscript>
+    <p>Please <a href="https://sodancenter.com/en/foreign-support">click here</a> to visit the site.</p>
+  </noscript>
+
+  <div id="manualRedirect">
+    <p>If you are not redirected automatically, please choose your language:</p>
+    <ul style="list-style: none; padding-left: 0;">
+      <li><a href="https://sodancenter.com/en/foreign-support">English</a></li>
+      <li><a href="https://sodancenter.com/ja/foreign-support">日本語</a></li>
+    </ul>
+  </div>
+
+  <script>
+    (function () {
+      try {
+        const lang = (navigator.language || navigator.userLanguage || "").toLowerCase();
+        let target = "https://sodancenter.com/en/foreign-support";
+        if (lang.startsWith("ja")) {
+          target = "https://sodancenter.com/ja/foreign-support";
+        }
+        setTimeout(() => {
+          document.getElementById("manualRedirect").style.display = "block";
+        }, 3000);
+        window.location.href = target;
+      } catch(e) {
+        document.getElementById("manualRedirect").style.display = "block";
+      }
+    })();
+  </script>
+</body>
+</html>
