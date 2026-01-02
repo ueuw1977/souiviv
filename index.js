@@ -278,12 +278,19 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ---------------- Read More toggle ---------------- */
-  const readToggle = document.getElementById('toggle-text');
-  const aboutText = document.getElementById('about-text');
-  readToggle?.addEventListener('click', () => {
-    aboutText?.classList.toggle('expanded');
-    readToggle.textContent = aboutText?.classList.contains('expanded') ? '閉じる' : 'もっと見る';
+const toggles = [
+  { buttonId: 'toggle-text-en', textId: 'about-text-en', openText: 'Read More', closeText: 'Read Less' },
+  { buttonId: 'toggle-text-ja', textId: 'about-text-ja', openText: 'もっと見る', closeText: '閉じる' }
+];
+
+toggles.forEach(({ buttonId, textId, openText, closeText }) => {
+  const button = document.getElementById(buttonId);
+  const text = document.getElementById(textId);
+  button?.addEventListener('click', () => {
+    text?.classList.toggle('expanded');
+    button.textContent = text?.classList.contains('expanded') ? closeText : openText;
   });
+});
 
   /* ---------------- Lightbox gallery ---------------- */
   const galleryImages = [
