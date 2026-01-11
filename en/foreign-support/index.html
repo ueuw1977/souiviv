@@ -1,808 +1,447 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Sodanセンター™ is a comprehensive online life support service for foreign residents in Japan. We provide multilingual assistance for interpreting, translation, city hall procedures, medical guidance, rental housing, job search, Japanese language learning and conversation practice, travel support, tax consultation, banking and mobile procedures, and emergency support.">
-  <title>SodanCenter™｜Comprehensive Life Support Services for Foreign Residents in Japan | Interpreting, Translation, Visas, Housing, Jobs, Japanese Lessons, Travel, Tax & Medical Support</title>
-  <link rel="alternate" hreflang="en" href="https://sodancenter.com/en/foreign-support" />
-  <link rel="alternate" hreflang="ja" href="https://sodancenter.com/ja/foreign-support" />
-  <link rel="alternate" hreflang="x-default" href="https://sodancenter.com/en/foreign-support" />
-  <link rel="icon" href="../../favicon.ico">
-  <link rel="stylesheet" href="../../index.css">
-  <link rel="stylesheet" href="../../member.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <script src="../../index.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sodanセンター™ – ホーム</title>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="style.css">
   <script async data-id="101498171" src="//static.getclicky.com/js"></script>
-  <script type="application/ld+json">
-  {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "SodanCenter",
-  "jobTitle": "SodanCenter",
-  "worksFor": {
-    "@type": "Organization",
-    "name": "SodanCenter"
-  },
-  "knowsLanguage": ["English"],
-  "description": "SodanCenter",
-  "url": "https://sodancenter.com/en/foreign-support"
+  <style>
+  html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+    font-family: 'Poppins', "MS Gothic", sans-serif;
+    background-color: #f9f9f9;
+    padding: 0;
+    color: #333;
+    overflow-x: hidden;
+    width: 100%;
+
+    .aboutus {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 2rem 0rem 2rem 0rem;
+  text-align: center;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.info-header h2 {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.info-content p {
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.info-content ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.info-content li {
+  font-size: 18px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.cta-button {
+  background-color: #dc33ff;
+  color: white;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.cta-button:hover {
+  background-color: #dc7bff;
+}
+
+@media (max-width: 768px) {
+  .aboutus {
+    padding: 2rem 0rem 2rem 0rem;
   }
+
+  .info-header h2 {
+    font-size: 36px;
+  }
+
+  .info-content p {
+    font-size: 18px;
+  }
+
+  .info-content li {
+    font-size: 16px;
+  }
+}
+    }
+  </style>
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const logo = document.querySelector('.nav-logo');
+  let angle = 0;
+  window.addEventListener('scroll', () => {
+    angle += window.scrollY * 0.001;
+    logo.style.transform = `rotate(${angle}rad)`;
+  });
+
+  const slides = document.querySelectorAll('.carousel-slide');
+  let idx = 0;
+  setInterval(() => {
+    slides[idx].classList.remove('active');
+    idx = (idx + 1) % slides.length;
+    slides[idx].classList.add('active');
+  }, 5000);
+
+  const hamburger = document.getElementById('hamburger');
+  const navRight = document.querySelector('.nav-right');
+
+  hamburger.addEventListener('click', () => {
+    navRight.classList.toggle('active');
+  });
+
+  const navLinks = document.querySelectorAll('.nav-link, .btn-login, .btn-signup');
+  
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navRight.classList.remove('active');
+    });
+  });
+});
+
+function scrollToCategory(id) {
+  const targetElement = document.getElementById(id);
+  if (!targetElement) return;
+
+  const offset = 75;
+  const targetPosition = targetElement.offsetTop - offset;
+
+  window.scrollTo({
+    top: targetPosition,
+    behavior: "smooth"
+  });
+}
   </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17778541333">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-17778541333');
+</script>
 </head>
 <body>
-<div class="bg-left"></div>
-<div class="bg-right"></div>
-<div class="bg-left2"></div>
-<div class="snow-container"></div>
 <header class="navbar" style="display: none;">
   <div class="nav-right">
-    <a href="#" onclick="scrollToCategory('about'); return false;" class="nav-link">Our Team</a>
-    <a href="#" onclick="scrollToCategory('booking'); return false;" class="nav-link">Pricing & Booking</a>
-    <a href="#" onclick="scrollToCategory('before'); return false;" class="nav-link">Before You Book</a>
-    <a href="#" onclick="scrollToCategory('stories'); return false;" class="nav-link">Customer Reviews</a>
-    <a href="chat" target="_blank" class="btn btn-a"><i class="fas fa-comment"></i> Live Chat</a>
-    <a href="meet" target="_blank" class="btn btn-a"><i class="fas fa-phone"></i> Online Support</a>
+    <a href="#" onclick="scrollToCategory('about'); return false;" class="nav-link">Sodanセンター™とは？</a>
+    <a href="#" onclick="scrollToCategory('categories'); return false;" class="nav-link">サービスカテゴリ</a>
+    <a href="#" onclick="scrollToCategory('how-it-works'); return false;" class="nav-link">ご利用の流れ</a>
+    <a href="#" onclick="scrollToCategory('success-stories'); return false;" class="nav-link">成功事例</a>
+    <a href="faq" class="nav-link">よくあるご質問</a>
+    <a href="contact" class="nav-link">お問い合わせ</a>
+    <a href="login" class="btn btn-login">ログイン</a>
+    <a href="invite" class="btn btn-signup">招待登録</a>
   </div>
 </header>
 
 <header class="navbar">
   <div class="nav-left">
-    <img src="../../img/icon.png" class="nav-logo">
-    <div class="logo-container">
-      <img src="../../img/logo1-en.png" class="logo-image" draggable="false" onclick="window.location.href='meet'; return false;" style="cursor: pointer;">
-      <img src="../../img/logo2-en.png" class="logo-image" draggable="false" onclick="window.location.href='meet'; return false;" style="cursor: pointer;">
-    </div>
-    <img src="../../img/top.png" width="40" height="40">
-    <div class="lang-wrapper" id="lang-wrapper">
-    <div id="lang-toggle">
-      <img class="lang-flag" src="../../img/lang.png">
-      <span>English&nbsp; &#9662;</span>
-    </div>
-    <div id="lang-dropdown">
-      <ul>
-        <li><a href="../../en/foreign-support"><img class="lang-flag" src="https://flagcdn.com/w80/gb.png">English</a></li>
-        <li><a href="../../ja/foreign-support"><img class="lang-flag" src="https://flagcdn.com/w80/jp.png">日本語</a></li>
-      </ul>
-    </div>
-  </div>
+    <img src="img/icon.png" class="nav-logo">
+    <img src="img/logo_text.png" width="200" height="50" draggable="false" style="margin-left: -8px;">
   </div>
 
-<div class="mobile-controls">
   <div id="hamburger">
     <span></span>
     <span></span>
     <span></span>
   </div>
-</div>
+
   <div class="nav-right">
-    <a href="#" onclick="scrollToCategory('about'); return false;" class="nav-link">Our Team</a>
-    <a href="#" onclick="scrollToCategory('booking'); return false;" class="nav-link">Pricing & Booking</a>
-    <a href="#" onclick="scrollToCategory('before'); return false;" class="nav-link">Before You Book</a>
-    <a href="#" onclick="scrollToCategory('stories'); return false;" class="nav-link">Customer Reviews</a>
-    <a href="chat" target="_blank" class="btn btn-a"><i class="fas fa-comment"></i> Live Chat</a>
-    <a href="meet" target="_blank" class="btn btn-a"><i class="fas fa-phone"></i> Online Consultation</a>
+    <a href="#" onclick="scrollToCategory('about'); return false;" class="nav-link">Sodanセンター™とは？</a>
+    <a href="#" onclick="scrollToCategory('categories'); return false;" class="nav-link">サービスカテゴリ</a>
+    <a href="#" onclick="scrollToCategory('how-it-works'); return false;" class="nav-link">ご利用の流れ</a>
+    <a href="#" onclick="scrollToCategory('success-stories'); return false;" class="nav-link">成功事例</a>
+    <a href="faq" class="nav-link">よくあるご質問</a>
+    <a href="contact" class="nav-link">お問い合わせ</a>
+    <a href="login" class="btn btn-login">ログイン</a>
+    <a href="invite" class="btn btn-signup">招待登録</a>
   </div>
 </header>
+<section class="aboutus">
+<section class="carousel">
+  <img src="img/carousel_1.jpg" class="carousel-slide active">
+  <img src="img/carousel_2.jpg" class="carousel-slide">
+  <img src="img/carousel_3.jpg" class="carousel-slide">
+  <img src="img/carousel_4.jpg" class="carousel-slide">
+</section>
 
-<!-- Top Section -->
-  <div class="top-section">
-  <div id="video-container" data-video-id="pldg5H28IWI" data-thumbnail="../../img/foreign-support/1.jpg">
-    <img src="../../img/foreign-support/1.jpg">
-    <div class="play-button">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="#dd33ff">
-       <path d="M8.5,6 Q8,6.5 8,7 L8,17 Q8,17.5 8.5,18 Q9,18.3 9.5,18 L17,12.5 Q17.5,12 17,11.5 L9.5,6 Q9,5.7 8.5,6 Z">
-     </svg>
-    </div>
+  <div class="info-header" id="about">
+    <h2>Sodanセンター™とは？</h2>
   </div>
+  <div class="info-content" style="padding: 0rem 5rem 0rem 5rem;">
+    <p>Sodanセンター™は、サービス提供者とクライアントをつなぐ革新的なプラットフォームです。  
+       私たちは、経験豊富なサービス提供者の成長を支援するため、さまざまなツールとリソースを提供しています。  
+       これまでに100名以上の業界トップクラスで経験豊富なプロフェッショナルを支援しており、現在も国内の幅広い分野の優秀な方々を対象に支援の輪を広げています。<br>
+       <br>
+       従来のオープン型プラットフォームとは異なり、Sodanセンター™は厳選されたプロフェッショナルのみ参加可能な完全招待制です。専門チームによる審査を通過したサービス提供者に、一対一の営業支援とリソースサポートを提供し、個人ブランドの構築や高品質なクライアントの獲得を強力にサポートします。<br>
+       <br>
+       Sodanセンター™ - 高いスキルを持つサービス提供者のための、ビジネスの「ホーム」。
+</p><br>
+    <a href="about" class="cta-button">もっと詳しく見る</a>
+    <p>
+  </div>
+</section>
 
-<div class="image-grid">
-  <img src="../../img/foreign-support/2.jpg">
-  <img src="../../img/foreign-support/3.jpg">
-  <img src="../../img/foreign-support/4.jpg">
-  <div class="sub-grid">
-    <img src="../../img/foreign-support/5.jpg">
-    <img src="../../img/foreign-support/6.jpg">
-    <img src="../../img/foreign-support/7.jpg">
-    <img src="../../img/foreign-support/8.jpg">
-  </div>
-</div>
-</div>
-
-  <div id="lightbox" class="lightbox hidden">
-    <span class="close-btn" id="lightbox-close">&times;</span>
-    <img id="lightbox-img" src="" alt="Lightbox Image">
-    <div class="nav left" id="prev-btn">&#10094;</div>
-    <div class="nav right" id="next-btn">&#10095;</div>
-  </div>
-<div style="height: 25px;"></div>
-
-<!-- About Section -->
-<div class="city-member" style="text-align: center;">
-<div id="about"></div>
-<div id="map-container">
-<h2>Trusted Online Support for Foreigners Living in Japan</h2>
-<div class="cert-hover-wrapper">
-  <input type="checkbox" id="cert-toggle" class="cert-toggle">
-  <div class="cert-popup">
-    <img src="certified.jpg" alt="Certification">
-    <label for="cert-toggle" class="cert-close">×</label>
-  </div>
-</div>
-
-<div class="member-list">
-<div class="about-section">
-  <div style="display: inline-block; width: 22%; vertical-align: top;">
-    <img src="../../img/foreign-support/avatar.jpg" width="88%" height="auto" style="border-radius: 50%; background-color: #dd33ff;">
-  </div>
-  <div style="display: inline-block; width: 75%; color: #999; text-align: left;">
-    <div class="read-more" id="about-text-en">
-<table class="member-info-table">
-  <tr>
-    <th>Team Member</th>
-    <td>Member Name<span class="other-name">（User ID foreign-support）</span></td>
-  </tr>
-  <tr>
-    <th>Available Services</th>
-    <td>Comprehensive Online Support for Foreign Residents in Japan</td>
-  </tr>
-  <tr>
-    <th>Main Service Areas</th>
-    <td>Tokyo, Yokohama, Osaka, Nagoya, Kobe, Kyoto, Sapporo, Fukuoka, Nationwide</td>
-  </tr>
-  <tr>
-    <th>Available Dates & Times</th>
-    <td>Monday–Sunday 9:00–23:00 (except public holidays)</td>
-  </tr>
-</table>
-    <div style="height: 8px;"></div>
-      Trusted online support for foreigners living in Japan. The Sakura Team is a comprehensive online support service made up of 22–26 experienced support staff members, including external specialists. We provide clear, multilingual guidance to help foreign residents and visitors navigate daily life in Japan. Our support covers a wide range of areas, including online interpretation and translation, Japanese conversation practice, daily administrative procedures, job and school consultations, visa application support, medical and social insurance information, tax-related guidance, and travel support.<br>
-      <br>
-      To date, we have supported more than 1,000 foreign residents, from those who have just arrived in Japan to those who have lived here for many years. We are highly trusted and often described as “reliable,” “reassuring,” and “easy to understand.” Our team values kindness, patience, and careful communication, and we take every question and concern seriously—no matter how small—while offering practical and appropriate guidance.<br>
-      <br>
-      All services are provided online using the Sodan Center online meeting tool, allowing us to offer immediate support from anywhere in Japan. For travelers who have not yet arrived, we also provide advance guidance and support to help ensure a smooth and comfortable stay in Japan.<br>
-      <br>
-      We provide general guidance and information support for daily life in Japan. Please note that our services do not include licensed legal, medical, or tax services.<br>
-      <br>
-      If you have any concerns about living in Japan or handling procedures, please feel free to contact us. The Sakura Team is here to help turn your worries into peace of mind.<br>
-      <br>
-      If you have any questions before making a reservation, please don’t hesitate to contact us via <a href="chat" class="nav-link" target="_blank"><b>Live Chat</b></a>, <a href="meet" class="nav-link" target="_blank"><b>Online Consultation</b></a> or <a href="mailto:foreign-support@sodancenter.com" class="nav-link"><b>foreign-support@sodancenter.com</b></a>.
-    </div>
-    <span class="read-toggle" id="toggle-text-en">Read More</span><span style="color: #ddd;">&nbsp; |&nbsp; </span><a href="#" onclick="scrollToCategory('booking'); return false;" class="read-toggle">Book Now</a>
-  </div>
-</div>
-</div>
-</div>
 <p></p>
+  <section class="intro">
+    <div class="intro-img">
+      <img src="img/offer.jpg" width="400" height="400">
+    </div>
+    <div class="intro-text">
+      <h2>Sodanセンター™で最初の案件をゲットして、<br>一緒に成長しよう！</h2>
+      <p>Sodanセンター™は多くの優れたサービス提供者を支援し、私たちのサポートを通じて、より楽で安定し、効率的な働き方の実現を可能にしました。</p>
+      <ul>
+      <li>安定したクライアント基盤の構築をサポート</li>
+      <li>マーケティング支援と案件紹介</li>
+      <li>信頼性の高い評価システム</li>
+      <li>効率的な契約ツールとテンプレート</li>
+      <li>長期的な競争力の強化</li>
+    </ul>
+    </div>
+  </section>
 
-<!-- Price Section -->
-<div class="city-member">
-<div id="booking"></div>
-<div id="map-container">
-<h2>Pricing & Booking</h2>
-<div class="price-title">All time packs are valid for all services.</div>
-<div class="member-list">
+  <section class="categories" id="categories">
+    <h2 style="font-size: 50px; text-align: center;">サービスカテゴリ</h2>
+    <hr>
+    <div class="category-grid">
+      <div class="category-item">
+        <h3><img src="img/icon.png" width="25" height="25" style="vertical-align: middle;"> 代行・生活サポート<span>（12人）</span></h3>
+        <p>掃除代行・引っ越し・買物代行・事務代行・書類提出代行 など</p>
+      </div>
+      <div class="category-item">
+        <h3><img src="img/icon.png" width="25" height="25" style="vertical-align: middle;"> 工事・住まいサービス<span>（16人）</span></h3>
+        <p>内装工事・塗装工事・内装修理・家電設置・家具設置 など</p>
+      </div>
+      <div class="category-item">
+        <h3><img src="img/icon.png" width="25" height="25" style="vertical-align: middle;"> コンサル・専門相談<span>（11人）</span></h3>
+        <p>マーケティング・ビジネス相談・法律相談・商標登録・起業支援・税務相談 など</p>
+      </div>
+      <div class="category-item">
+        <h3><img src="img/icon.png" width="25" height="25" style="vertical-align: middle;"> 交流・体験サービス<span>（19人）</span></h3>
+        <p>話し相手・ゲームプレイ・観光ガイド・イベント企画・ビデオ通話 など</p>
+      </div>
+      <div class="category-item">
+        <h3><img src="img/icon.png" width="25" height="25" style="vertical-align: middle;"> 動画撮影・編集<span>（9人）</span></h3>
+        <p>広告動画、プロモーション動画、SNSコンテンツ、ショート動画の撮影・編集、3Dアニメーション制作 など</p>
+      </div>
+      <div class="category-item">
+        <h3><img src="img/icon.png" width="25" height="25" style="vertical-align: middle;"> 教育・トレーニング<span>（6人）</span></h3>
+        <p>宿題サポートチュータリング・試験対策チュータリング・大學入學輔導・職場研修 など</p>
+      </div>
+      <div class="category-item">
+        <h3><img src="img/icon.png" width="25" height="25" style="vertical-align: middle;"> IT・クリエイティブ<span>（15人）</span></h3>
+        <p>Web制作・デザイン・アプリ開発・動画制作・AI活用支援・ERP/CRM開発 など</p>
+      </div>
+      <div class="category-item">
+        <h3><img src="img/icon.png" width="25" height="25" style="vertical-align: middle;"> 翻訳・通訳サービス<span>（6人）</span></h3>
+        <p>日英翻訳・技術翻訳・通訳同行・字幕翻訳・翻訳チェック など</p>
+      </div>
+      <div class="category-item">
+        <h3><img src="img/icon.png" width="25" height="25" style="vertical-align: middle;"> 声優・キャラクターボイス<span>（3人）</span></h3>
+      <p>アニメ声・ゲームCV・ボイスドラマ・キャラ演技・台詞読み上げ など</p>
+      </div>
+      <div class="category-item">
+        <h3><img src="img/icon.png" width="25" height="25" style="vertical-align: middle;"> 音楽・BGM制作<span>（2人）</span></h3>
+      <p>オリジナルBGM・音声編集・ジングル制作・効果音・作曲依頼 など</p>
+      </div>
+      <div class="category-item">
+        <h3><img src="img/icon.png" width="25" height="25" style="vertical-align: middle;"> イベント・催事サポート<span>（3人）</span></h3>
+        <p>イベントスタッフ・会場設営・受付代行・運営補助 など</p>
+      </div>
+      <div class="category-item">
+        <h3><img src="img/icon.png" width="25" height="25" style="vertical-align: middle;"> AI導入・業務DX支援<span>（5人）</span></h3>
+        <p>中小企業向けのAI活用支援、業務プロセスの自動化、チャットボット導入、データ分析支援、業務効率化コンサルティング など</p>
+      </div>
+      <div class="category-item">
+        <h3><img src="img/icon.png" width="25" height="25" style="vertical-align: middle;"> ペット・動物ケア<span>（2人）</span></h3>
+        <p>ペットシッター・しつけ相談・ペット送迎・トリミング予約代行 など</p>
+      </div>
+      <div class="category-item">
+        <h3><img src="img/icon.png" width="25" height="25" style="vertical-align: middle;"> データ入力・文字起こし<span>（4人）</span></h3>
+        <p>音声文字起こし・手書きデータ入力・議事録作成・名刺入力 など</p>
+      </div>
+      <div class="category-item">
+        <h3><img src="img/icon.png" width="25" height="25" style="vertical-align: middle;"> 資料作成・プレゼン支援<span>（7人）</span></h3>
+        <p>パワポ資料作成・営業資料整理・企画書ブラッシュアップ など</p>
+      </div>
+      <div class="category-item">
+        <h3><img src="img/icon.png" width="25" height="25" style="vertical-align: middle;"> 写真修正・画像加工<span>（5人）</span></h3>
+        <p>レタッチ・画像合成・背景削除・商品画像補正・SNS用加工 など</p>
+      </div>
 
-<!-- 1 -->
-<a href="booking" class="member-card" target="_blank">
-  <div class="member-rating level-priority toggle-tooltip">
-    ⭐ 5.0　Online Daily Interpretation
+    </div>
+    <div class="category-note">
+      <p>サービス提供者の取引機会を最大限に確保するために、BGIPは経験豊富なサービス提供者に対して、1対1の営業支援およびプロモーション投資を行い、同業者間での過度な競争を回避します。</p>
+      <p>現在、プラットフォーム上ではサービス提供者のランキング情報や関連プロジェクトは公開されておらず、正式なアカウントを取得したサービス提供者のみが、自身のプロフィールから業界内でのランキングを確認することができます。</p>
+    </div>
+  </section>
+
+<section class="categories" id="how-it-works">
+  <h2 style="font-size: 50px; text-align: center;">ご利用の流れ</h2>
+  <hr>
+  <div>
+    <div style="align-items: center;">
+
+    <div class="category-grid">
+      <div class="category-item" style="text-align: center;">
+        <font style="font-size: 20px;">STEP 1</font><br><font style="font-size: 25px;">本人確認書類提出</font><br>
+        <img src="img/step1.png" width="160" height="160"><br>
+        <font style="font-size: 16px;">本人確認書類の審査は1〜3営業日で完了します。</font><p></p>
+      </div>
+      <div class="category-item" style="text-align: center;">
+        <font style="font-size: 20px;">STEP 2</font><br><font style="font-size: 25px;">面談による資格審査</font><br>
+        <img src="img/step2.png" width="160" height="160"><br>
+        <font style="font-size: 16px;">資格審査のオンライン面談は30〜45分程度行われます。</font><p></p>
+      </div>
+      <div class="category-item" style="text-align: center;">
+        <font style="font-size: 20px;">STEP 3</font><br><font style="font-size: 25px;">保証金の支払い</font><br>
+        <img src="img/step3.png" width="160" height="160"><br>
+        <font style="font-size: 16px;">保証金は業界により1万〜50万円で設定されています。公式に招待された方は、保証金が免除されます。</font><p></p>
+      </div>
+      <div class="category-item" style="text-align: center;">
+        <font style="font-size: 20px;">STEP 4</font><br><font style="font-size: 25px;">公式認定の取得</font><br>
+        <img src="img/step4.png" width="160" height="160"><br>
+        <font style="font-size: 16px;">審査通過後、BGIPジネス成長投資プログラムが開始されます。</font><p></p>
+      </div>
+    </div>
+    <div style="max-width: 1024px; margin: 1rem auto; line-height: 1.8; font-size: 1rem; text-align: center; padding: 0 1rem;">
+    ご契約はすべてオンラインで完結。認定後は、最短で即日からプログラムの各種支援をご利用いただけます。成果報酬型のため、初期費用やリスクは一切ありません。サービス提供に専念しながら、案件紹介、契約ツール、信頼評価システムをフル活用いただけます。
   </div>
-  <div class="tooltip-mostpopular">⭐ Most Popular ⭐</div>
-  <div class="discount-badge">50%オフ</div>
-  <div class="booking-content">
-    <div class="member-avatar-wrapper with-award">
-    <div class="member-avatar-online"></div>
-    <img src="../../img/foreign-support/avatar.jpg" class="member-avatar" style="margin-bottom: 8px;">
-    <div class="play-icon">▶</div>
-    </div>
-    <div class="member-name">さくらサポートチーム</div>
-    <div class="member-area">
-      <span class="lang-tag"><img src="https://flagcdn.com/w80/gb.png"> English</span>
-      <span class="lang-tag"><img src="https://flagcdn.com/w80/jp.png"> 日本語</span>
-    </div>
-    <div class="member-area">
-      <span class="lang-tag"><img src="../../img/coordinates.png"> Online Support</span>
-    </div>
-    <div class="price-format">30 min (Interpretation)</div>
-    <div class="other-name"><del>Regular Price: 6,600 JPY (incl. tax)</del></div>
-    <div class="member-name">Special Price: 3,300 JPY (incl. tax)</div>
-    <div class="member-price">Online interpretation for procedures, jobs, visas, medical care, housing, taxes, legal matters, and travel.</div>
-    <div class="member-name">*Extra 30 min +3,300 JPY</div>
-    <input type="submit" value="Book Now – No Sign-Up">
-    <div class="booking-note">Free online consultation before booking</div>
-    <img src="../../img/payment.png" width="100%" height="auto">
   </div>
-</a>
+</section>
+<div>
+  <section class="testimonials" id="success-stories">
+    <h2 style="font-size: 50px; text-align: center;">成功事例</h2>
+    <hr>
+    <div class="testi-grid">
+      <div class="testi-item">
+        <img src="img/industries_01.jpg">
+        <h4>高橋愛</h4>
+        <p>資深數位行銷顧問</p>
+        <p>「BGIPのおかげで、新しい案件が増え、安定した毎日を送れています。感謝しています！」</p>
+      </div>
+      <div class="testi-item">
+        <img src="img/industries_02.jpg">
+        <h4>渡辺拓海</h4>
+        <p>資深塗装専門家</p>
+        <p>「プラットフォームの投資によって、信頼されるパートナーとして認められました。本当にありがとうございます！」</p>
+      </div>
+      <div class="testi-item">
+        <img src="img/industries_03.jpg">
+        <h4>山本健太 (Michael)</h4>
+        <p>広告プロデューサー</p>
+        <p>「案件の質が飛躍的に向上し、自信を持てるようになりました。BGIPに感謝です！」</p>
+      </div>
+      <div class="testi-item">
+        <img src="img/industries_04.jpg">
+        <h4>加藤結衣</h4>
+        <p>資深掃除代行チーム代表</p>
+        <p>「チームの活動がさらに広がり、多くのお客様と出会えました。心から感謝しています。」</p>
+      </div>
 
-<!-- 2 -->
-<a href="booking" class="member-card" target="_blank">
-  <div class="member-rating level-priority toggle-tooltip">
-    ⭐ 4.9　Japanese Mini Conversation Experience
-  </div>
-  <div class="tooltip-bestvalue">✔ Best Value</div>
-  <div class="discount-badge">50％ OFF</div>
-  <div class="booking-content">
-    <div class="member-avatar-wrapper with-award">
-    <div class="member-avatar-online"></div>
-    <img src="../../img/foreign-support/avatar2.jpg" class="member-avatar" style="margin-bottom: 8px;">
-    <div class="play-icon">▶</div>
+      <div class="testi-item">
+        <img src="img/industries_05.jpg">
+        <h4>鈴木花子</h4>
+        <p>家庭教師</p>
+        <p>「プラットフォームのサポートをもらってから、ますますこの仕事が好きになったよ。子どもたちの成長を見るのが嬉しいんだ。」</p>
+      </div>
+      <div class="testi-item">
+        <img src="img/industries_06.jpg">
+        <h4>中村拓也</h4>
+        <p>ソフトウェアエンジニア</p>
+        <p>「普段あまり話さないし、人と関わるのは苦手だけど、BGIPがすごく助けてくれたよ。ありがとうございます。」</p>
+      </div>
+      <div class="testi-item">
+        <img src="img/industries_07.jpg">
+        <h4>小林 翔</h4>
+        <p>電気工事士</p>
+        <p>「業務量が明らかに増えており、今後もBGIPと共に成長していくつもりです」</p>
+      </div>
+      <div class="testi-item">
+        <img src="img/industries_08.jpg">
+        <h4>加藤 健</h4>
+        <p>民事弁護士</p>
+        <p>「普段の案件がたくさんあって、基本的に忙しくて手が回らないんだ。でもここでいいお客さんにたくさん出会えて、プラットフォームの助けに感謝してるよ。」</p>
+      </div>
     </div>
-    <div class="member-name">中村日本語講師</div>
-    <div class="member-area">
-      <span class="lang-tag"><img src="https://flagcdn.com/w80/gb.png"> English</span>
-      <span class="lang-tag"><img src="https://flagcdn.com/w80/jp.png"> 日本語</span>
-    </div>
-    <div class="member-area">
-      <span class="lang-tag"><img src="../../img/coordinates.png"> Online Support</span>
-    </div>
-    <div class="price-format">30 min (Conversation)</div>
-    <div class="other-name"><del>Regular Price: 6,600 JPY (incl. tax)</del></div>
-    <div class="member-name">Special Price: 3,300 JPY (incl. tax)</div>
-    <div class="member-price">Japanese conversation lessons – one-on-one, improve pronunciation, grammar & daily expressions.</div>
-    <div class="member-name">*Extra 30 min +3,300 JPY</div>
-    <input type="submit" value="Book Now – No Sign-Up">
-    <div class="booking-note">Free online consultation before booking</div>
-    <img src="../../img/payment.png" width="100%" height="auto">
-  </div>
-</a>
+  </section>
 
-<!-- 3 -->
-<a href="booking" class="member-card" target="_blank">
-  <div class="member-rating level-priority toggle-tooltip">
-    ⭐ 4.9　Daily Life Support / Guidance / Problem Solving
-  </div>
-  <div class="tooltip-recommended">✔ Recommended</div>
-  <div class="discount-badge">50％ OFF</div>
-  <div class="booking-content">
-    <div class="member-avatar-wrapper with-award">
-    <div class="member-avatar-online"></div>
-    <img src="../../img/foreign-support/avatar10.jpg" class="member-avatar" style="margin-bottom: 8px;">
-    <div class="play-icon">▶</div>
-    </div>
-    <div class="member-name">鈴木サポートチーム</div>
-    <div class="member-area">
-      <span class="lang-tag"><img src="https://flagcdn.com/w80/gb.png"> English</span>
-      <span class="lang-tag"><img src="https://flagcdn.com/w80/jp.png"> 日本語</span>
-    </div>
-    <div class="member-area">
-      <span class="lang-tag"><img src="../../img/coordinates.png"> Online Support</span>
-    </div>
-    <div class="price-format">30 min (Explanation)</div>
-    <div class="other-name"><del>Regular Price: 6,600 JPY (incl. tax)</del></div>
-    <div class="member-name">Special Price: 3,300 JPY (incl. tax)</div>
-    <div class="member-price">Support with daily troubles, document organization, contact guidance, and waste sorting.</div>
-    <div class="member-name">*Extra 30 min +3,300 JPY</div>
-    <input type="submit" value="Book Now – No Sign-Up">
-    <div class="booking-note">Free online consultation before booking</div>
-    <img src="../../img/payment.png" width="100%" height="auto">
-  </div>
-</a>
+  <p></p>
+  <section class="banner-large">
+    <img src="img/banner_local.jpg">
+  </section>
 
-<!-- 4 -->
-<a href="booking" class="member-card" target="_blank">
-  <div class="member-rating level-high toggle-tooltip">
-    ⭐ 4.9　Comprehensive Daily Procedures Package
-  </div>
-  <div class="tooltip-recommended">✔ Recommended</div>
-  <div class="discount-badge">50％ OFF</div>
-  <div class="booking-content">
-    <div class="member-avatar-wrapper with-award">
-    <div class="member-avatar-online"></div>
-    <img src="../../img/foreign-support/avatar11.jpg" class="member-avatar" style="margin-bottom: 8px;">
-    <div class="play-icon">▶</div>
+    <h2 style="font-size: 40px; text-align: center;">Sodanセンター™公式商談用会議室</h2>
+    <hr>
+<section class="meeting-room">
+  <div class="meeting-info">
+    <p><b>サービス提供者とお客様の商談用会議室（無料）</b><br>
+      Sodanセンター™は面談用の公式会議室または提携先スペースを無料で提供しています。6～8名まで収容可能で、無料Wi‑Fi・モニター・ホワイトボード・飲料水が備わっています。繁忙期には事前予約が必要です。
+  <img src="img/meeting_room.jpg" style="border-radius:20px; width: 100%; height: auto;"><br>
+  <img src="img/shibuya.jpg" style="border-radius:20px; width: 100%; height: auto;">
+    </p>
+      <h2>Sodanセンター™</h2>
+      〒150-0030 東京都渋谷区桜丘町４−１４ビジネスセンター<br>
+      <b>最寄り駅：</b>JR渋谷駅（新南口）徒歩2分／東京メトロ（銀座線・半蔵門線）徒歩6分 東京メトロ（半蔵門線）徒歩6分</p>
+      <p><b>受付時間：</b>平日 10:00〜18:00（土日・祝日除く）</p>
+      <p>何かご不明な点がありましたら、<a href="contact">お問い合わせ</a>までご連絡ください。</p>
     </div>
-    <div class="member-name">さくらサポートチーム</div>
-    <div class="member-area">
-      <span class="lang-tag"><img src="https://flagcdn.com/w80/gb.png"> English</span>
-      <span class="lang-tag"><img src="https://flagcdn.com/w80/jp.png"> 日本語</span>
-    </div>
-    <div class="member-area">
-      <span class="lang-tag"><img src="../../img/coordinates.png"> Online Support</span>
-    </div>
-    <div class="price-format">30 min (Explanation)</div>
-    <div class="other-name"><del>Regular Price: 6,600 JPY (incl. tax)</del></div>
-    <div class="member-name">Special Price: 3,300 JPY (incl. tax)</div>
-    <div class="member-price">Support for bank accounts, mobile contracts, utilities, My Number, and residency procedures.</div>
-    <div class="member-name">*Extra 30 min +3,300 JPY</div>
-    <input type="submit" value="Book Now – No Sign-Up">
-    <div class="booking-note">Free online consultation before booking</div>
-    <img src="../../img/payment.png" width="100%" height="auto">
-  </div>
-</a>
+  </section>
+  
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const slides = document.querySelectorAll('.carousel-slide');
+  let idx = 0;
 
-<!-- 5 -->
-<a href="booking" class="member-card" target="_blank">
-  <div class="member-rating level-priority toggle-tooltip">
-    ⭐ 4.9　Travel / Transportation & Reservation Assistance
-  </div>
-  <div class="discount-badge">50％ OFF</div>
-  <div class="booking-content">
-    <div class="member-avatar-wrapper with-award">
-    <div class="member-avatar-online"></div>
-    <img src="../../img/foreign-support/avatar8.jpg" class="member-avatar" style="margin-bottom: 8px;">
-    <div class="play-icon">▶</div>
+  setInterval(() => {
+    slides[idx].classList.remove('active');
+    idx = (idx + 1) % slides.length;
+    slides[idx].classList.add('active');
+  }, 5000);
+});
+</script>
+
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/69442f1139e95e197be53c89/1jcp647tc';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<hr>
+ <p></p>
+  <footer class="site-footer">
+    <div>
+      <a href="https://apps.apple.com/" target="_blank"><img src="img/appstore.png" width="150" height="45"></a>&nbsp;
+      <a href="https://play.google.com/store/apps" target="_blank"><img src="img/playstore.png" width="150" height="45"></a>
     </div>
-    <div class="member-name">木村サポートチーム</div>
-    <div class="member-area">
-      <span class="lang-tag"><img src="https://flagcdn.com/w80/gb.png"> English</span>
-      <span class="lang-tag"><img src="https://flagcdn.com/w80/jp.png"> 日本語</span>
-    </div>
-    <div class="member-area">
-      <span class="lang-tag"><img src="../../img/coordinates.png"> Online Support</span>
-    </div>
-    <div class="price-format">30 min (Plan Consultation)</div>
-    <div class="other-name"><del>Regular Price: 6,600 JPY (incl. tax)</del></div>
-    <div class="member-name">Special Price: 3,300 JPY (incl. tax)</div>
-    <div class="member-price">Guidance on transportation, IC card usage, and simple itinerary planning. Accompaniment quoted separately.</div>
-    <div class="member-name">*Extra 30 min +3,300 JPY</div>
-    <input type="submit" value="Book Now – No Sign-Up">
-    <div class="booking-note">Free online consultation before booking</div>
-    <img src="../../img/payment.png" width="100%" height="auto">
-  </div>
-</a>
-
-<!-- 6 -->
-<a href="booking" class="member-card" target="_blank">
-  <div class="member-rating level-priority toggle-tooltip">
-    ⭐ 4.9　Job Search / Employment Support / Mock Interviews
-  </div>
-  <div class="discount-badge">50％ OFF</div>
-  <div class="booking-content">
-    <div class="member-avatar-wrapper with-award">
-    <div class="member-avatar-online"></div>
-    <img src="../../img/foreign-support/avatar4.jpg" class="member-avatar" style="margin-bottom: 8px;">
-    <div class="play-icon">▶</div>
-    </div>
-    <div class="member-name">小林キャリアアドバイザー</div>
-    <div class="member-area">
-      <span class="lang-tag"><img src="https://flagcdn.com/w80/gb.png"> English</span>
-      <span class="lang-tag"><img src="https://flagcdn.com/w80/jp.png"> 日本語</span>
-    </div>
-    <div class="member-area">
-      <span class="lang-tag"><img src="../../img/coordinates.png"> Online Support</span>
-    </div>
-    <div class="price-format">30 min (Consultation)</div>
-    <div class="other-name"><del>Regular Price: 6,600 JPY (incl. tax)</del></div>
-    <div class="member-name">Special Price: 3,300 JPY (incl. tax)</div>
-    <div class="member-price">Resume and CV review, expression improvement, industry-specific advice, and interview preparation support.</div>
-    <div class="member-name">*Extra 30 min +3,300 JPY</div>
-    <input type="submit" value="Book Now – No Sign-Up">
-    <div class="booking-note">Free online consultation before booking</div>
-    <img src="../../img/payment.png" width="100%" height="auto">
-  </div>
-</a>
-
-<!-- 7 -->
-<a href="booking" class="member-card" target="_blank">
-  <div class="member-rating level-high toggle-tooltip">
-    ⭐ 4.8　Visa Application & Renewal Guidance
-  </div>
-  <div class="tooltip-recommended">✔ Recommended</div>
-  <div class="discount-badge">50％ OFF</div>
-  <div class="booking-content">
-    <img src="../../img/foreign-support/avatar7.jpg" class="member-avatar" style="margin-bottom: 8px;">
-    <div class="member-name">吉田サポートチーム</div>
-    <div class="member-area">
-      <span class="lang-tag"><img src="https://flagcdn.com/w80/gb.png"> English</span>
-      <span class="lang-tag"><img src="https://flagcdn.com/w80/jp.png"> 日本語</span>
-    </div>
-    <div class="member-area">
-      <span class="lang-tag"><img src="../../img/coordinates.png"> Online Support</span>
-    </div>
-    <div class="price-format">30 min (Explanation)</div>
-    <div class="other-name"><del>Regular Price: 6,600 JPY (incl. tax)</del></div>
-    <div class="member-name">Special Price: 3,300 JPY (incl. tax)</div>
-    <div class="member-price">Guidance on job and school enrollment procedures, and general overview of visa applications and renewals (application services not provided).</div>
-    <div class="member-name">*Extra 30 min +3,300 JPY</div>
-    <input type="submit" value="Book Now – No Sign-Up">
-    <div class="booking-note">Free online consultation before booking</div>
-    <img src="../../img/payment.png" width="100%" height="auto">
-  </div>
-</a>
-
-<!-- 8 -->
-<a href="booking" class="member-card" target="_blank">
-  <div class="member-rating level-high toggle-tooltip">
-    ⭐ 5.0　Rental Contracts & Public Service Support
-  </div>
-  <div class="tooltip-mostpopular">⭐ Most Popular ⭐</div>
-  <div class="discount-badge">50％ OFF</div>
-  <div class="booking-content">
-    <img src="../../img/foreign-support/avatar6.jpg" class="member-avatar" style="margin-bottom: 8px;">
-    <div class="member-name">田中サポートチーム</div>
-    <div class="member-area">
-      <span class="lang-tag"><img src="https://flagcdn.com/w80/gb.png"> English</span>
-      <span class="lang-tag"><img src="https://flagcdn.com/w80/jp.png"> 日本語</span>
-    </div>
-    <div class="member-area">
-      <span class="lang-tag"><img src="../../img/coordinates.png"> Online Support</span>
-    </div>
-    <div class="price-format">30 min (Interview + Document Review)</div>
-    <div class="other-name"><del>Regular Price: 6,600 JPY (incl. tax)</del></div>
-    <div class="member-name">Special Price: 3,300 JPY (incl. tax)</div>
-    <div class="member-price">Explanation of contract process and important points, document checklist, utility setup (guarantor not provided).</div>
-    <div class="member-name">*Extra 30 min +3,300 JPY</div>
-    <input type="submit" value="Book Now – No Sign-Up">
-    <div class="booking-note">Free online consultation before booking</div>
-    <img src="../../img/payment.png" width="100%" height="auto">
-  </div>
-</a>
-
-<!-- 9 -->
-<a href="booking" class="member-card" target="_blank">
-  <div class="member-rating level-priority toggle-tooltip">
-    ⭐ 4.9　Tax Filing Support & Basic Guidance
-  </div>
-  <div class="tooltip-bestvalue">✔ Best Value</div>
-  <div class="discount-badge">50％ OFF</div>
-  <div class="booking-content">
-    <img src="../../img/foreign-support/avatar5.jpg" class="member-avatar" style="margin-bottom: 8px;">
-    <div class="member-name">佐藤サポートチーム</div>
-    <div class="member-area">
-      <span class="lang-tag"><img src="https://flagcdn.com/w80/gb.png"> English</span>
-      <span class="lang-tag"><img src="https://flagcdn.com/w80/jp.png"> 日本語</span>
-    </div>
-    <div class="member-area">
-      <span class="lang-tag"><img src="../../img/coordinates.png"> Online Support</span>
-    </div>
-    <div class="price-format">30 min (Explanation)</div>
-    <div class="other-name"><del>Regular Price: 6,600 JPY (incl. tax)</del></div>
-    <div class="member-name">Special Price: 3,300 JPY (incl. tax)</div>
-    <div class="member-price">Support for personal and corporate taxes and health insurance, basic income tax filing guidance, explanation of deductions and required documents (tax filing services not provided).</div>
-    <div class="member-name">*Extra 30 min +3,300 JPY</div>
-    <input type="submit" value="Book Now – No Sign-Up">
-    <div class="booking-note">Free online consultation before booking</div>
-    <img src="../../img/payment.png" width="100%" height="auto">
-  </div>
-</a>
-
-<!-- 10 -->
-<a href="booking" class="member-card" target="_blank">
-  <div class="member-rating level-high toggle-tooltip">
-    ⭐ 4.9　Medical / Health Insurance / Hospital Guidance
-  </div>
-  <div class="tooltip-mostpopular">⭐ Most Popular ⭐</div>
-  <div class="discount-badge">50％ OFF</div>
-  <div class="booking-content">
-    <div class="member-avatar-wrapper with-award">
-    <div class="member-avatar-online"></div>
-    <img src="../../img/foreign-support/avatar.jpg" class="member-avatar" style="margin-bottom: 8px;">
-    <div class="play-icon">▶</div>
-    </div>
-    <div class="member-name">さくらサポートチーム</div>
-    <div class="member-area">
-      <span class="lang-tag"><img src="https://flagcdn.com/w80/gb.png"> English</span>
-      <span class="lang-tag"><img src="https://flagcdn.com/w80/jp.png"> 日本語</span>
-    </div>
-    <div class="member-area">
-      <span class="lang-tag"><img src="../../img/coordinates.png"> Online Support</span>
-    </div>
-    <div class="price-format">30 min (Explanation)</div>
-    <div class="other-name"><del>Regular Price: 6,600 JPY (incl. tax)</del></div>
-    <div class="member-name">Special Price: 3,300 JPY (incl. tax)</div>
-    <div class="member-price">Guidance on visiting medical institutions, insurance coverage, and appointment procedures (medical treatment not provided).</div>
-    <div class="member-name">*Extra 30 min +3,300 JPY</div>
-    <input type="submit" value="Book Now – No Sign-Up">
-    <div class="booking-note">Free online consultation before booking</div>
-    <img src="../../img/payment.png" width="100%" height="auto">
-  </div>
-</a>
-
-<!-- 11 -->
-<a href="booking" class="member-card" target="_blank">
-  <div class="member-rating level-high toggle-tooltip">
-    ⭐ 4.7　Cultural Adaptation & Etiquette Guidance
-  </div>
-  <div class="discount-badge">50％ OFF</div>
-  <div class="booking-content">
-    <img src="../../img/foreign-support/avatar9.jpg" class="member-avatar" style="margin-bottom: 8px;">
-    <div class="member-name">福田サポートチーム</div>
-    <div class="member-area">
-      <span class="lang-tag"><img src="https://flagcdn.com/w80/gb.png"> English</span>
-      <span class="lang-tag"><img src="https://flagcdn.com/w80/jp.png"> 日本語</span>
-    </div>
-    <div class="member-area">
-      <span class="lang-tag"><img src="../../img/coordinates.png"> Online Support</span>
-    </div>
-    <div class="price-format">30 min (Explanation)</div>
-    <div class="other-name"><del>Regular Price: 6,600 JPY (incl. tax)</del></div>
-    <div class="member-name">Special Price: 3,300 JPY (incl. tax)</div>
-    <div class="member-price">Guidance on common daily etiquette, local rules, and basic workplace manners with practical examples.</div>
-    <div class="member-name">*Extra 30 min +3,300 JPY</div>
-    <input type="submit" value="Book Now – No Sign-Up">
-    <div class="booking-note">Free online consultation before booking</div>
-    <img src="../../img/payment.png" width="100%" height="auto">
-  </div>
-</a>
-
-<!-- 12 -->
-<a href="booking" class="member-card" target="_blank">
-  <div class="member-rating level-high toggle-tooltip">
-    ⭐ 4.8　Emergency Support & Action Guidance
-  </div>
-  <div class="discount-badge">50％ OFF</div>
-  <div class="booking-content">
-    <div class="member-avatar-wrapper with-award">
-    <div class="member-avatar-online"></div>
-    <img src="../../img/foreign-support/avatar3.jpg" class="member-avatar" style="margin-bottom: 8px;">
-    <div class="play-icon">▶</div>
-    </div>
-    <div class="member-name">鈴木サポートチーム</div>
-    <div class="member-area">
-      <span class="lang-tag"><img src="https://flagcdn.com/w80/gb.png"> English</span>
-      <span class="lang-tag"><img src="https://flagcdn.com/w80/jp.png"> 日本語</span>
-    </div>
-    <div class="member-area">
-      <span class="lang-tag"><img src="../../img/coordinates.png"> Online Support</span>
-    </div>
-    <div class="price-format">30 min (Explanation)</div>
-    <div class="other-name"><del>Regular Price: 6,600 JPY (incl. tax)</del></div>
-    <div class="member-name">Special Price: 3,300 JPY (incl. tax)</div>
-    <div class="member-price">Initial rapid guidance for lost residence cards, passports, and other belongings, including contact information and required documents.</div>
-    <div class="member-name">*Extra 30 min +3,300 JPY</div>
-    <input type="submit" value="Book Now – No Sign-Up">
-    <div class="booking-note">Free online consultation before booking</div>
-    <img src="../../img/payment.png" width="100%" height="auto">
-  </div>
-</a>
-
-</div>
-</div>
-<p></p>
-
-<!-- Before Section -->
-<div class="city-member">
-  <div id="before"></div>
-  <div id="map-container">
-    <h2>Before You Book</h2>
-    <div class="price-title">Please review the following important points before booking.</div>
-
-    <table width="100%" style="margin: 0 auto; padding: 10px; border-radius: 12px; background-color: #fff0f6aa;">
-      <tr>
-        <td style="text-align: left;" class="before">
-        <div style="max-width: 600px; margin: 0 auto; padding: 0 20px;">
-
-          <h3><img src="../../img/icon.png" width="25" height="25" style="vertical-align: middle;"> Cancellation & Refund Policy</h3>
-          <ul>
-            <li>Cancellation more than 12 hours before the reserved start time: No cancellation fee applies. Any unused hours can be carried over for your next session.<br>
-              *Hours cancelled before 12 hours can be carried over to future use.</li>
-            <li>Cancellation within 12 hours of the reserved start time: If you cancel or fail to show up without notice, reserved hours cannot be carried over.<br>
-              *For example, if you booked a 2-hour session, those 2 hours cannot be carried over.<br>
-              *Hours already used cannot be carried over.</li>
-            <li>Cancellation or interruption after service start: Once the service has started, any cancellation or interruption will forfeit all reserved hours, including unused portions.<br>
-              *The session will be counted from the reserved hours; please note that stopping mid-session will not reduce charges.</li>
-            <li>Refund handling fee: If a refund is issued, processing fees charged by the payment provider (e.g., 6%) will be deducted from the refunded amount.</li>
-          </ul>
-
-          <h3><img src="../../img/icon.png" width="25" height="25" style="vertical-align: middle;"> Payment</h3>
-          <ul>
-            <li>Please purchase the required time package before the session starts and pay online via PayPal, PayPay, credit card, bank transfer, etc.</li>
-            <li>Payments must be made in advance; the service will start once payment is confirmed.</li>
-            <li>Time packages can be used across all services (e.g., 30 min, 1 hour, or multiple hours).</li>
-            <li>Unused hours can be carried over to future sessions.</li>
-            <li>Any currency exchange or payment processing fees are the responsibility of the customer.</li>
-          </ul>
-
-          <h3><img src="../../img/icon.png" width="25" height="25" style="vertical-align: middle;"> Service Time & Fees</h3>
-          <ul>
-            <li>Reserved time packages can be applied to any service, but the minimum booking per session is 30 minutes.</li>
-            <li>Fees are calculated from the earlier of the reserved start time or online connection established.</li>
-            <li>Delays or unpreparedness on the customer’s side cannot adjust session time or fees.</li>
-            <li>If the customer leaves or loses connection during a session, that time is counted as service time, including waiting time.</li>
-            <li>Even if the service is interrupted or stopped mid-session, fees for the reserved time still apply.</li>
-          </ul>
-
-          <h3><img src="../../img/icon.png" width="25" height="25" style="vertical-align: middle;"> Service Extension</h3>
-          <ul>
-            <li>If the session exceeds the reserved time, additional time will be billed based on standard rates. Extensions must be agreed upon with staff during the session.</li>
-            <li>Extension is subject to discussion with the staff during the online service.</li>
-            <li>Time calculation follows these increments:<br>
-              ・0–30 min: 30-min rate<br>
-              ・31–60 min: 60-min rate<br>
-              ・61–90 min: 90-min rate<br>
-              ・After 90 min, additional 30-min increments apply.
-            </li>
-          </ul>
-
-          <h3><img src="../../img/icon.png" width="25" height="25" style="vertical-align: middle;"> What’s Included</h3>
-          <ul>
-            <li>Fees cover basic support required for online services. Please note that we do not provide on-site services.</li>
-            <li>All services are provided online through the Sodan Center consultation room and live chat. We do not offer services via phone, LINE, WhatsApp, or other communication tools outside Sodan Center.</li>
-            <li>The support services we provide are primarily focused on interpretation, supplemented with additional solutions and advice based on previous experience. However, we do not guarantee that we will solve your problem, and the final decision rests with you. Therefore, we do not take legal responsibility for the outcome.</li>
-          </ul>
-
-          <h3><img src="../../img/icon.png" width="25" height="25" style="vertical-align: middle;"> Staff Assignment</h3>
-          <ul>
-            <li>Staff is not fixed per session. If the originally assigned staff cannot attend, another qualified staff member will provide the service. Staff assignments may change depending on circumstances.</li>
-          </ul>
-
-          <h3><img src="../../img/icon.png" width="25" height="25" style="vertical-align: middle;"> Emergencies & Force Majeure</h3>
-          <ul>
-            <li>Internet or communication issues may cause service delays. We appreciate your understanding.</li>
-            <li>In case of unavoidable delays or cancellations due to natural disasters or emergencies, alternative scheduling will be arranged.</li>
-          </ul>
-
-          <h3><img src="../../img/icon.png" width="25" height="25" style="vertical-align: middle;"> Invoicing</h3>
-          <ul>
-            <li>Invoices can be issued for corporate clients upon request.</li>
-            <li>For any questions regarding invoices, please contact the service team.</li>
-          </ul>
-
-        </div>
-        </td>
-      </tr>
-    </table>
-</div>
-<p></p>
-
-<!-- Stories Section -->
-<div class="city-member">
-<div id="stories"></div>
-<div id="map-container">
-<h2>Customer Reviews</h2>
-<div class="price-title">Reviews are not for individual members, but for the certified staff members service as a whole.</div>
-<div class="member-list">
-
-<a href="booking" class="member-card" target="_blank">
-  <div class="booking-content">
-    <div class="stars">★★★★★</div>
-    <b>Life in Japan has become much easier!</b><br>
-    <div class="review">
-      お客様名: <b>J.K.様</b><br>
-      地域: <b>大阪市</b><br>
-      利用時期: <b>2026年1月</b><br><br>
-      I was worried about the procedure for my residence certificate and health insurance, but the online support was so helpful and explained everything clearly. The process was quick and easy, and I was able to complete everything without any issues. I would definitely use this service again!
-    </div>
-  </div>
-</a>
-
-<a href="booking" class="member-card" target="_blank">
-  <div class="booking-content">
-    <div class="stars">★★★★★</div>
-    <b>日本語の会話力が確実に向上しました！</b><br>
-    <div class="review">
-      お客様名: <b>匿名希望</b><br>
-      地域: <b>東京都</b><br>
-      利用時期: <b>2025年12月</b><br><br>
-      定期的にオンラインで会話サポートを受けており、すでに150時間以上の予約をしています。おかげさまで、私の日本語会話力は明らかに向上しました。中村先生とSodanセンターには感謝しています。あなたたちのサポートがあったおかげで、私は成長できました。
-    </div>
-  </div>
-</a>
-
-<a href="booking" class="member-card" target="_blank">
-  <div class="booking-content">
-    <div class="stars">★★★★☆</div>
-    <b>Smooth and easy process</b><br>
-    <div class="review">
-      お客様名: <b>匿名希望</b><br>
-      地域: <b>東京都</b><br>
-      利用時期: <b>2025年9月</b><br><br>
-      I received help with setting up my bank account, and the process was very smooth. Thanks to the quick response, I was able to finish everything without wasting time. I’m very satisfied and will definitely ask for help again.
-    </div>
-  </div>
-</a>
-
-<a href="booking" class="member-card" target="_blank">
-  <div class="booking-content">
-    <div class="stars">★★★★☆</div>
-    <b>留学手続きのサポートが完璧でした</b><br>
-    <div class="review">
-      お客様名: <b>匿名希望</b><br>
-      地域: <b>京都市</b><br>
-      利用時期: <b>2025年11月</b><br><br>
-      留学のための手続きが複雑で心配でしたが、オンラインで一つ一つ確認しながらサポートしてもらい、スムーズに進みました。しっかりとした説明で安心して任せられました。また利用したいです。
-    </div>
-  </div>
-</a>
-
-<a href="booking" class="member-card" target="_blank">
-  <div class="booking-content">
-    <div class="stars">★★★★★</div>
-    <b>Great support for resume building!</b><br>
-    <div class="review">
-      お客様名: <b>A.S.様</b><br>
-      地域: <b>東京都</b><br>
-      利用時期: <b>2025年9月</b><br><br>
-      I got help with my resume for job hunting. The advice I received was much more detailed than I expected, and it helped me pass the interview! I didn’t think I could get this much support online. Highly recommend!
-    </div>
-  </div>
-</a>
-
-<a href="booking" class="member-card" target="_blank">
-  <div class="booking-content">
-    <div class="stars">★★★★☆</div>
-    <b>Medical appointment made easy</b><br>
-    <div class="review">
-      お客様名: <b>F.M.様</b><br>
-      地域: <b>福岡市</b><br>
-      利用時期: <b>2026年1月</b><br><br>
-      I had trouble understanding how to make a medical appointment, but with their support, I was able to complete everything smoothly. The online service was convenient because I didn’t have to worry about location or timing. I’m really grateful for the help.
-    </div>
-  </div>
-</a>
-
-<a href="booking" class="member-card" target="_blank">
-  <div class="booking-content">
-    <div class="stars">★★★★★</div>
-    <b>Sodan Center is very helpful online service</b><br>
-    <div class="review">
-      お客様名: <b>J.A.様</b><br>
-      地域: <b>札幌市</b><br>
-      利用時期: <b>2025年7月</b><br><br>
-      I had a lot of questions about life procedures in Japan, but I was able to get quick and friendly support online. I managed to complete my residence certificate and national health insurance registration with no problems. The service was fast and helpful, and I’ll definitely use it again.
-    </div>
-  </div>
-</a>
-
-<a href="booking" class="member-card" target="_blank">
-  <div class="booking-content">
-    <div class="stars">★★★★★</div>
-    <b>非常に迅速で丁寧なサービス</b><br>
-    <div class="review">
-      お客様名: <b>C.M.様</b><br>
-      地域: <b>東京都</b><br>
-      利用時期: <b>2026年1月</b><br><br>
-      退職後の手続きが非常にスムーズに進み、税務や住民票などの質問にも親切に答えてもらえました。オンラインでのサービスも非常に便利でした。料金がとても明確で納得しました。
-    </div>
-  </div>
-</a>
-
-<a href="booking" class="member-card" target="_blank">
-  <div class="booking-content">
-    <div class="stars">★★★★★</div>
-    <b>日本での生活がスムーズになったのはSodanセンターのサポートのおかげです！</b><br>
-    <div class="review">
-      お客様名: <b>匿名希望</b><br>
-      地域: <b>大阪市</b><br>
-      利用時期: <b>2025年9月</b><br><br>
-      日本での生活が順調に進んでいるのは、Sodanセンターのサポートが非常に重要だったからです。問題が発生するたびに、Sodanセンターが親切に解決策を提供してくれました。私も日本に来たばかりの友人に、すでにSodanのサービスを勧めています。
-    </div>
-  </div>
-</a>
-
-<a href="booking" class="member-card" target="_blank">
-  <div class="booking-content">
-    <div class="stars">★★★★★</div>
-    <b>Highly trustworthy service!</b><br>
-    <div class="review">
-      お客様名: <b>R.T.様</b><br>
-      地域: <b>名古屋市</b><br>
-      利用時期: <b>2026年1月</b><br><br>
-      I needed assistance with tax filing, and the service was excellent. They helped me understand all the necessary paperwork and provided clear instructions. The staff was friendly and professional. The cost was reasonable, and I would use this service again in the future.
-    </div>
-  </div>
-</a>
-
-<a href="booking" class="member-card" target="_blank">
-  <div class="booking-content">
-    <div class="stars">★★★★☆</div>
-    <b>住まいのサポートからゴミの分別までお世話になりました！</b><br>
-    <div class="review">
-      お客様名: <b>匿名希望</b><br>
-      地域: <b>神奈川県</b><br>
-      利用時期: <b>2025年9月</b><br><br>
-      好きな物件を見つけるときに、緊急連絡先が必要だったり、外国人には貸さない物件が多かったりして困っていました。でも、Sodan Centerのサポートのおかげで、すぐに満足のいく価格で良い物件を借りることができました。大きなサポートから小さなごみの分別のことまで、こちらの支援が本当に大きかったです。現在も専任の相談サービスを利用しており、これからもずっとお世話になりたいと思っています。
-    </div>
-  </div>
-</a>
-
-<a href="booking" class="member-card" target="_blank">
-  <div class="booking-content">
-    <div class="stars">★★★★★</div>
-    <b>서비스가 아주 유용했습니다!</b><br>
-    <div class="review">
-      お客様名: <b>H.K.様</b><br>
-      地域: <b>東京都</b><br>
-      利用時期: <b>2025年12月</b><br><br>
-      일본에서 여러 가지 절차를 어떻게 진행할지 몰라 걱정했는데, 온라인 지원 덕분에 매우 쉽게 해결할 수 있었습니다. 필요한 정보와 절차를 차근차근 설명해주셔서 큰 도움이 되었습니다. 앞으로도 이용하고 싶습니다.
-    </div>
-  </div>
-</a>
-
-</div>
-</div>
-<p></p>
 <div id="footer"></div>
 <script>
   fetch('../../footer.html')
@@ -812,18 +451,5 @@
     })
     .catch(error => console.error('© 2025 Sodanセンター™ All rights reserved.', error));
 </script>
-
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/6957179d06ed52198625406d/1jdu38g9b';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-
 </body>
 </html>
