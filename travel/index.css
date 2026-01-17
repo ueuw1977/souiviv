@@ -1,0 +1,1185 @@
+body {
+  font-family: 'Poppins', "MS Gothic", sans-serif;
+  background-color: #fefefe;
+  color: #333;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+a {
+  color: #ff3399;
+  text-decoration: none;
+}
+
+a:hover {
+  color:#cc0077;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: #fffafaaa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1.5rem;
+  z-index: 9999;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 1rem;
+}
+
+.nav-logo {
+  width: 50px;
+  height: 50px;
+  user-select: none;
+  pointer-events: none;
+  margin-left: -10px;
+}
+
+.nav-right .btn {
+  padding: 0.5rem 0.5rem;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background 0.3s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  color:#ffffff;
+}
+
+.nav-link {
+  color: #ff3399;
+  font-size: 11pt;
+  font-weight: bold;
+  text-decoration: none;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.lang-flag {
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.lang-wrapper {
+  color: #ff3399;
+  position: relative;
+  display: inline-block;
+}
+
+.lang-wrapper:hover #lang-dropdown {
+  display: block;
+}
+
+#lang-toggle,
+#lang-dropdown li {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+#lang-toggle {
+  padding: 8px 8px;
+  width: max-content;
+}
+
+#lang-toggle:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: #ff3399;
+}
+
+#lang-dropdown {
+  display: none;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: 9999;
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+#lang-dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#lang-dropdown li {
+  font-size: 13px;
+  padding: 8px 12px;
+  border-radius: 12px;
+}
+
+#lang-dropdown li:hover {
+  background-color: #ffddee;
+}
+
+#lang-dropdown li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+}
+
+.lang-wrapper:hover #lang-dropdown,
+.lang-wrapper.force-show #lang-dropdown {
+  display: block;
+}
+
+.mobile-controls {
+  display: none;
+  align-items: center;
+  gap: 16px;
+  margin-left: auto;
+}
+
+@media (max-width: 1200px) {
+  .mobile-controls {
+display: flex;
+  }
+}
+
+#hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  width: 22px;
+  gap: 4px;
+  margin-left: auto;
+}
+
+#hamburger span {
+  height: 3px;
+  background-color: #ff3399;
+  border-radius: 2px;
+  display: block;
+}
+
+#hamburger:hover span {
+  background-color: #ff66aa;
+}
+
+@media (max-width: 1200px) {
+  header.navbar {
+display: flex !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  #hamburger {
+display: flex;
+  }
+
+  .nav-right {
+display: none;
+flex-direction: column;
+width: 100%;
+  }
+  
+  .nav-right.active {
+height: 100%;
+display: flex;
+padding-top: 80px;
+padding-bottom: 60px;
+background-color: #ffffffaa;
+border-radius: 20px;
+line-height: 2;
+  }
+}
+
+  .nav-right.active .nav-links {
+display: flex;
+height: 200px;
+text-decoration: none;
+color: inherit;
+  }
+  
+  .nav-right .btn {
+padding: 0.5rem 1.2rem;
+font-size: 0.95rem;
+text-decoration: none;
+  }
+
+.cart-link {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+}
+
+.cart-image {
+  width: 32px;
+  height: 32px;
+  transition: filter 0.3s ease;
+}
+
+.cart-image:hover {
+  filter: brightness(1.3);
+  cursor: pointer;
+}
+
+.btn-b { background: #ff66aa; color: #fff; }
+.btn-a { background: #ff3399; color: #fff; }
+.nav-right .btn:hover { background: #ff7bbd; }
+
+.bg-left {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 220px;
+  height: 178px;
+  background-image: url('img/bg_left.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.bg-right {
+  position: fixed;
+  top: 70px;
+  right: 0;
+  width: 130px;
+  height: 190px;
+  background-image: url('img/bg_right.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.bg-left2 {
+  position: fixed;
+  bottom: 0px;
+  left: 0;
+  width: 104px;
+  height: 152px;
+  background-image: url('img/bg_left2.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.bg-right2 {
+  position: fixed;
+  bottom: 0px;
+  right: 0;
+  width: 142px;
+  height: 176px;
+  background-image: url('img/bg_right2.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.logo-container {
+  position: relative;
+  width: 250px;
+  height: 50px;
+  overflow: hidden;
+  margin-left: -8px;
+}
+
+.logo-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 50px;
+  transition: opacity 1s ease, transform 1s ease;
+  opacity: 0;
+  transform: scale(1.2);
+}
+
+.logo-image.active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+}
+
+.snow-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.snow-wrapper {
+  position: absolute;
+  top: -50px;
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+
+.snowflake {
+  background-image: url('img/sakura.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+  animation-name: spin;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+
+@keyframes fall {
+  0% {
+transform: translateY(0);
+  }
+  100% {
+transform: translateY(120vh);
+  }
+}
+
+@keyframes spin {
+  0% {
+transform: rotate(0deg);
+  }
+  100% {
+transform: rotate(360deg);
+  }
+}
+
+.guide-card {
+  position: relative;
+  overflow: hidden;
+  background: #fff0f6aa;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(255, 123, 189, 0.1);
+  text-align: center;
+  transition: transform 0.2s ease;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid #ffaed6;
+}
+
+.guide-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(255, 51, 153, 0.7);
+  border: 1px solid #ff69b4;
+}
+
+.guide-rating {
+  height: 22px;
+  background-color: #ff3399;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: bold;
+  padding: 6px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.guide-rating.level-high {
+  height: 22px;
+  background-color: #ff3399;
+}
+
+.guide-rating.level-priority {
+  height: 22px;
+  background-color: #cc0066;
+}
+
+.guide-avatar-wrapper {
+  position: relative;
+  width: 145px;
+  height: 145px;
+  display: inline-block;
+  border-radius: 50%;
+  border: 1px solid #ff69b4;
+}
+
+.guide-avatar-wrapper::after {
+  content: '▶';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: #ff3399;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  z-index: 2;
+}
+
+.guide-avatar-wrapper:hover::after {
+  opacity: 1;
+}
+
+.guide-avatar-wrapper:hover .play-icon {
+  opacity: 1;
+}
+
+.guide-avatar {
+  position: relative;
+  width: 145px;
+  height: 145px;
+  margin: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  z-index: 1;
+}
+
+.guide-avatar-wrapper img:hover {
+  filter: brightness(1.05);
+}
+
+.with-award::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  width: calc(100% + 24px);
+  height: calc(100% + 24px);
+  background-image: url('img/avatar_award.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.guide-avatar-wrapper.with-award {
+  overflow: visible;
+}
+
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: #ff3399;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 2;
+}
+
+input[type="submit"] {
+  background-color: #ff3399;
+  color: #fff;
+  border: none;
+  font-size: 11pt;
+  border-radius: 12px;
+  cursor: pointer;
+  height: 36px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  display: block;
+  margin: 0.5rem auto 0;
+  min-width: 92%;
+  box-shadow: 0 6px 16px rgba(255, 51, 153, 0.4);
+}
+
+input[type="submit"]:hover {
+  background-color: #ff7bbd;
+  box-shadow: 0 8px 20px rgba(255, 123, 189, 0.6);
+}
+
+.discount-badge {
+  position: absolute;
+  top: 42px;
+  left: -8px;
+  background-color: #ff0033;
+  color: #fff;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 4px 10px;
+  transform: rotate(-10deg);
+  border-radius: 0 8px 8px 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 5;
+  pointer-events: none;
+}
+
+.guide-content {
+  padding-top: 1rem;
+}
+
+.package-name {
+  font-weight: bold;
+  font-size: 20pt;
+  color: #cc0066;
+  margin-bottom: 8px;
+}
+
+.break {
+  display: block;
+  width: 100%;
+  height: 0;
+}
+
+.guide-name {
+  font-weight: bold;
+  font-size: 10pt;
+  color: #cc0066;
+  margin-bottom: 8px;
+}
+
+.guide-price {
+  font-size: 0.9rem;
+  color: #cc0066;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.guide-languages {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 2px;
+  margin-bottom: 10px;
+}
+
+.guide-note {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  font-size: 9pt;
+  color: #cc0066;
+  line-height: 21px;
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+
+.guide-avatar-online::before {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  right: 21px;
+  width: 15px;
+  height: 15px;
+  background-color: #ff3399;
+  border: 2px solid white;
+  border-radius: 50%;
+  z-index: 3;
+  box-shadow: 0 0 4px #ff339999;
+}
+
+.guide-avatar-away::before {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  right: 21px;
+  width: 15px;
+  height: 15px;
+  background-color: #ffd777;
+  border: 2px solid white;
+  border-radius: 50%;
+  z-index: 3;
+  box-shadow: 0 0 4px #ffd77799;
+}
+
+.scroll-wrapper {
+  position: absolute;
+  top: 66px;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 200px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  background-color: #ffffff;
+  margin: 0;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scroll-track {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  will-change: transform;
+}
+
+.scroll-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 80%;
+  right: 0;
+  width: 100%;
+  height: 60%;
+  background: linear-gradient(to top, #000000, transparent);
+  pointer-events: none;
+}
+
+.carousel-img {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin-right: 1px;
+  flex-shrink: 0;
+}
+
+.carousel-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: auto;
+  -webkit-user-drag: none;
+  pointer-events: auto;
+}
+
+.carousel-img img:hover {
+  filter: brightness(1.1);
+}
+
+.carousel-img .caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 80%;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  user-select: text;
+  pointer-events: none;
+}
+
+.carousel-img img:hover {
+  filter: brightness(1.1);
+}
+
+.lang-tag {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 4px 10px 4px 5px;
+  font-size: 9pt;
+}
+
+.lang-tag img {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 4px;
+}
+
+.tooltip-icon {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  line-height: 18px;
+  position: relative;
+  cursor: pointer;
+}
+
+.guide-video-container {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  border-radius: 14px;
+}
+
+.guide-video-container.hidden {
+  display: none;
+}
+
+.guide-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.video-close-btn {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 12px;
+  right: 12px;
+  background: rgba(255, 255, 255, 0.75);
+  border: none;
+  color: #cc0066;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.2s ease;
+}
+
+.video-close-btn:hover {
+  background: #fff;
+}
+
+.tooltip-icon-booking-en::after {
+  content: "Our private guided tour service is specially designed for small groups, with a recommended group size of up to 10–12 people. Whether you're traveling solo or with friends and family, we offer a fixed group rate, and pricing is not based on the number of participants, making it easier for you to plan your trip with peace of mind.";
+}
+
+.tooltip-icon-booking-ja::after {
+  content: "当社のプライベートガイドサービスは、小規模グループ向けに設計されており、推奨人数は最大10〜12名までとなっております。お一人様のご参加でも、ご家族やご友人とのグループ旅行でも、料金は一律のグループ料金となっており、人数によって価格は変わりません。人数を気にせず、安心してご旅行の計画を立てていただけます。";
+}
+
+.tooltip-icon-booking-ko::after {
+  content: "저희의 프라이빗 가이드 투어 서비스는 소규모 그룹을 위해 설계되었으며, 권장 인원은 최대 10~12명입니다. 혼자 여행하시든, 가족이나 친구들과 함께하시든 요금은 인원수에 관계없이 동일한 그룹 요금으로 책정됩니다. 인원수를 걱정하지 않고, 보다 자유롭게 여행 일정을 계획하실 수 있습니다.";
+}
+
+.tooltip-icon-booking-zh-tw::after {
+  content: "我們提供的私人導遊服務專為小型團體設計，建議人數上限為 10～12 人。無論您是一人獨旅，或是一群親友同行，我們皆採用固定團費制，不另按人數收費，讓您更輕鬆規劃行程。";
+}
+
+.tooltip-icon-booking-it::after {
+  content: "Il nostro servizio di tour privati con guida è pensato appositamente per piccoli gruppi, con un numero consigliato di partecipanti fino a 10–12 persone. Che tu stia viaggiando da solo o con amici e familiari, offriamo una tariffa fissa per gruppo, e il prezzo non varia in base al numero di partecipanti, rendendo più semplice organizzare il tuo viaggio in tutta tranquillità.";
+}
+
+.tooltip-icon-en::after {
+  content: "This rating is provided by the guide group based on a comprehensive evaluation of the member’s service quality, communication, delivery record, and client feedback. It is not solely based on user reviews and is offered for reference only. It does not constitute a guarantee of service outcomes.";
+}
+
+.tooltip-icon-ja::after {
+  content: "この評価は、メンバーの対応品質、コミュニケーション、実績、および顧客からのフィードバックをもとに、本グループが総合的に判断した公式の推奨指標です。ユーザー評価のみに基づくものではなく、参考情報として提供されており、成果を保証するものではありません。";
+}
+
+.tooltip-icon-ko::after {
+  content: "이 평가는 구성원의 서비스 품질, 커뮤니케이션, 이행 실적 및 고객 피드백을 바탕으로 본 단체가 종합적으로 평가한 공식 추천 지표입니다. 사용자 평가만을 기준으로 한 것은 아니며, 참고용으로 제공되는 것이며, 서비스 결과를 보장하는 것은 아닙니다.";
+}
+
+.tooltip-icon-zh-tw::after {
+  content: "本團體依據成員之服務品質、溝通表現、完成紀錄與客戶反饋進行綜合評估，提供此評分作為官方推薦指標。該評分並非完全根據客戶評價，僅供參考，亦不保證服務結果。";
+}
+
+.tooltip-icon-it::after {
+  content: "Questa valutazione viene fornita dal gruppo di guide basandosi su una valutazione complessiva della qualità del servizio del membro, della comunicazione, del rendimento e del feedback dei clienti. Non si basa esclusivamente sulle recensioni degli utenti ed è offerta solo a scopo informativo. Non costituisce una garanzia dei risultati del servizio.";
+}
+
+.tooltip-icon-en::after {
+  content: "This rating is provided by the guide group based on a comprehensive evaluation of the member’s service quality, communication, delivery record, and client feedback. It is not solely based on user reviews and is offered for reference only. It does not constitute a guarantee of service outcomes.";
+}
+
+.tooltip-icon-vehicle-en::after {
+  content: "Our group only facilitates the reservation of chartered car services. The actual transportation service is provided and fully managed by our partner company. Please pay the car fare directly to the driver on the day of service. If you need assistance, your tour guide can help you communicate with the driver.";
+}
+
+.tooltip-icon-vehicle-ja::after {
+  content: "本グループは、貸切車サービスの予約を仲介するのみであり、実際のサービスは本グループの提携パートナー企業が提供し、全責任を負います。サービス当日は、車両料金を運転手に直接お支払いください。ご不明な点がある場合は、ガイドにお知らせいただければ、運転手との連絡をお手伝いいたします。";
+}
+
+.tooltip-icon-vehicle-ko::after {
+  content: "당 그룹은 차량 예약을 중개하는 역할만 수행하며, 실제 차량 서비스는 당 그룹의 제휴 파트너 업체에서 제공하고 전적인 책임을 집니다. 서비스 당일, 차량 요금은 운전기사에게 직접 지불해 주시기 바랍니다. 도움이 필요하신 경우, 가이드에게 말씀해 주시면 운전기사와의 연락을 도와드릴 수 있습니다.";
+}
+
+.tooltip-icon-vehicle-zh-tw::after {
+  content: "本集團僅協助預約包車服務，實際包車服務由本集團合作夥伴公司提供並全權負責。請於服務當天，將包車費用直接支付給合作的司機。如有需要，您可通知導遊，導遊將協助您與司機聯絡。";
+}
+
+.tooltip-icon-vehicle-it::after {
+  content: "Il nostro gruppo si occupa solo di facilitare la prenotazione del servizio di noleggio auto con conducente. Il servizio di trasporto vero e proprio è fornito e gestito interamente dalla nostra compagnia partner. Si prega di pagare la tariffa direttamente all’autista il giorno del servizio. Se avete bisogno di assistenza, la vostra guida turistica potrà aiutarvi a comunicare con l’autista.";
+}
+
+.tooltip-icon::after {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  width: 175px;
+  background: #fff0f6;
+  color: #cc0066;
+  padding: 0.75rem;
+  font-size: 9pt;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  visibility: hidden;
+  z-index: 9999;
+  transition: opacity 0.3s ease;
+  white-space: normal;
+}
+
+.tooltip-recommended {
+  position: absolute;
+  top: 34px;
+  right: -5px;
+  background: linear-gradient(to right, #ee88ff, #cc00ff);
+  color: #fff;
+  font-size: 9px;
+  font-weight: bold;
+  padding: 4px 10px 4px 8px;
+  border-radius: 0px 0 0 24px;
+  box-shadow: 0 2px 6px rgba(187, 0, 255, 0.3);
+  z-index: 5;
+  pointer-events: auto;
+  font-family: 'Segoe UI', sans-serif;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.tooltip-mostpopular {
+  position: absolute;
+  top: 34px;
+  right: -5px;
+  background: linear-gradient(to right, #ffaa00, #ff4400);
+  color: #fff;
+  font-size: 9px;
+  font-weight: bold;
+  padding: 4px 10px 4px 8px;
+  border-radius: 0px 0 0 24px;
+  box-shadow: 0 2px 6px rgba(255, 106, 0, 0.3);
+  z-index: 5;
+  pointer-events: auto;
+  font-family: 'Segoe UI', sans-serif;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.tooltip-bestvalue {
+  position: absolute;
+  top: 34px;
+  right: -5px;
+  background: linear-gradient(to right, #00aaff, #0066ff);
+  color: #fff;
+  font-size: 9px;
+  font-weight: bold;
+  padding: 4px 10px 4px 8px;
+  border-radius: 0px 0 0 24px;
+  box-shadow: 0 2px 6px rgba(0, 106, 255, 0.3);
+  z-index: 5;
+  pointer-events: auto;
+  font-family: 'Segoe UI', sans-serif;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.tooltip-vehicle {
+  position: absolute;
+  top: 34px;
+  right: -5px;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  color: #fff;
+  font-size: 9px;
+  font-weight: bold;
+  padding: 4px 10px 4px 8px;
+  border-radius: 0px 0 0 24px;
+  box-shadow: 0 2px 6px rgba(0, 102, 255, 0.3);
+  z-index: 5;
+  pointer-events: auto;
+  font-family: 'Segoe UI', sans-serif;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.tooltip-certified {
+  position: absolute;
+  top: 34px;
+  right: -5px;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  color: #fff;
+  font-size: 9px;
+  font-weight: bold;
+  padding: 4px 10px 4px 8px;
+  border-radius: 0px 0 0 24px;
+  box-shadow: 0 2px 6px rgba(0, 102, 255, 0.3);
+  z-index: 5;
+  pointer-events: auto;
+  font-family: 'Segoe UI', sans-serif;
+  letter-spacing: 0.5px;
+  cursor: default;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.tooltip-certified-en::after {
+  content: "This guide is certified and endorsed by The Guide Group, demonstrating international-level professionalism and service excellence.";
+}
+
+.tooltip-certified-ja::after {
+  content: "本ガイドは The Guide Group により認定および推薦されており、国際水準の専門性とサービス品質を備えています。";
+}
+
+.tooltip-certified-ko::after {
+  content: "본 가이드는 The Guide Group의 인증과 추천을 받은 국제 수준의 전문성과 서비스 품질을 갖춘 전문가입니다.";
+}
+
+.tooltip-certified-zh-tw::after {
+  content: "本導遊榮獲 The Guide Group 認證與推薦，具備國際級專業素養與服務水準。";
+}
+
+.tooltip-certified::after {
+  position: absolute;
+  top: 120%;
+  right: 15%;
+  width: 200px;
+  background: #fff0f6;
+  color: #cc0066;
+  padding: 0.75rem;
+  font-size: 9pt;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  visibility: hidden;
+  opacity: 0;
+  z-index: 9999;
+  transition: opacity 0.3s ease;
+  white-space: normal;
+}
+
+.tooltip-certified.active::after,
+.tooltip-certified:hover::after {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip-icon::before {
+  content: "ⓘ";
+}
+
+.tooltip-icon:hover::after,
+.tooltip-icon:focus::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.toggle-tooltip.active .tooltip-icon::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+#map-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: #ffffffaa;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  border: 1px solid #ffa5bd;
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+}
+
+#japan-map {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  margin-bottom: 2rem;
+}
+
+.city-guides {
+  margin-bottom: 2rem;
+}
+
+.before h3 {
+  color: #cc0066;
+  font-size: 18px;
+  margin-bottom: 0.3em;
+}
+
+.before ul {
+  font-size: 14px;
+  color: #ff3399;
+  margin-top: 0;
+}
+
+.attractions-3d {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0px;
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+  gap: 1px;
+  margin-bottom: 8px;
+}
+
+.attraction-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 150px;
+  flex: 1 1 0;
+  text-align: center;
+  font-size: 12px;
+  color: #333;
+}
+
+.attraction-item p {
+  margin-top: 2px;
+  line-height: 1.2;
+}
+
+.attraction-item a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #ff3399;
+}
+
+.attraction-item a:hover {
+  color: #ff7bbd;
+}
+
+.attraction-item a:hover img {
+  filter: brightness(1.1);
+}
+
+.attractions-3d img {
+  width: 100%;
+  max-width: 150px;
+  min-width: 90px;
+  flex: 1 1 0;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+
+@media (max-width: 940px) {
+  .attraction-item {
+flex: 0 0 calc(20% - 1px);
+max-width: calc(20% - 1px);
+  }
+}
+
+.selected-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  background-image: url('img/icon-selected.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: transform 0.4s ease, width 0.4s ease, height 0.4s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.city-guides h2 {
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+  color: #ff3399;
+  text-align: center;
+}
+
+.package-title {
+  text-align: center;
+  transform: translateY(-15px);
+  font-size: 1.0rem;
+  color: #ff3399;
+}
+
+.guide-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(216px, 1fr));
+  gap: 16px;
+}
+
+.guide-point {
+  background: #fff0f6;
+  padding: 1rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(255, 123, 189, 0.1);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.stars {
+  color: #ffd777;
+  font-size: 1.2rem;
+}
+
+.review {
+  padding: 20px;
+  font-size: 9pt;
+  text-align: left;
+  margin-top: 0.5rem;
+  color: #333;
+}
+
+.guest-img {
+  width: 100%;
+  height: auto;
+  border-radius: 14px 14px 0 0;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: -16px;
+}
+
+.footer-links p { font-size: 14px; color:#ff3399;}
+.footer-links a { font-size: 12px; color:#ff3399; transition: color 0.3s; }
+.footer-links a:hover { color:#ff7bbd; }
+
+.copyright {
+text-align: center;
+font-size: 11px;
+color: #ff3399;
+margin-top: -20px;
+margin-bottom: 20px;
+}

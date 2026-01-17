@@ -1,0 +1,121 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', "MS Gothic", sans-serif;
+    background-color: #f9f9f9;
+    padding: 2em;
+    color: #000000;
+    line-height: 1.5;
+}
+
+h1, h2 {
+    color: #ff3399;
+    margin-bottom: 0.2em;
+}
+
+ul {
+    margin-left: 0.5em;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ff3399;
+}
+
+b {
+    color: #ff3399;
+}
+
+a {
+  color: #ff3399;
+  text-decoration: none;
+}
+
+a:hover {
+  color:#ff7bbd;
+}
+
+.faq-container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ffa5bd;
+}
+
+.faq-item {
+    margin: 12px 0;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.faq-header {
+    padding: 15px 25px 15px 45px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #ff7bbd;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    position: relative;
+}
+
+.faq-header:hover {
+    background-color: #ff3399;
+}
+
+.faq-header.active {
+    background-color: #ff3399;
+    color: white;
+}
+
+.faq-header::before {
+    content: "🌸";
+    font-size: 22px;
+    position: absolute;
+    left: 15px;
+    top: 27px;
+    transform: translateY(-50%);
+}
+
+.faq-answer {
+    padding: 5px 20px 25px 20px;
+    font-size: 16px;
+    background-color: transparent;
+    color: #555;
+    display: none;
+    border-radius: 0 0 20px 20px;
+    margin-top: 10px;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+.highlight {
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 20px;
+    border: 1px solid #ffa5bd;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.copyright {
+    text-align: center;
+    font-size: 11px;
+    color: #ff3399;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
