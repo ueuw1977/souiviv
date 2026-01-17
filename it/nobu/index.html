@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Prenota Nobu Ishigaki, una guida turistica privata autorizzata a Tokyo che offre tour personalizzati in italiano. Esplora i tesori nascosti di Tokyo con approfondimenti locali su misura per i tuoi interessi.">
+  <title>Nobu Ishigaki – Guida Turistica Privata Abilitata a Tokyo | Guida Privata Giappone</title>
+  <link rel="icon" href="../../travel/favicon.ico">
+  <link rel="stylesheet" href="../../travel/index.css">
+  <link rel="stylesheet" href="../../travel/member.css">
+  <script src="../../index.js"></script>
+  <script async data-id="101499536" src="//static.getclicky.com/js"></script>
+</head>
+<body>
+<div class="bg-left"></div>
+<div class="bg-right"></div>
+<div class="bg-left2"></div>
+<div class="snow-container"></div>
+<header class="navbar" style="display: none;">
+  <div class="nav-right">
+    <a href="#" onclick="scrollToCategory('about'); return false;" class="nav-link">Chi Sono</a>
+    <a href="#" onclick="scrollToCategory('bookable'); return false;" class="nav-link">Date Disponibili</a>
+    <a href="#" onclick="scrollToCategory('booking'); return false;" class="nav-link">Prenotazioni</a>
+    <a href="#" onclick="scrollToCategory('before'); return false;" class="nav-link">Prima di Prenotare</a>
+    <a href="#" onclick="scrollToCategory('vehicle'); return false;" class="nav-link">Van Privato</a>
+    <a href="#" onclick="scrollToCategory('stories'); return false;" class="nav-link">Storie degli Ospiti</a>
+    <a href="../faq" target="_blank" class="btn btn-b">FAQ</a>
+    <a href="../contact" target="_blank" class="btn btn-a">Contatti</a>
+  </div>
+</header>
+
+<header class="navbar">
+  <div class="nav-left">
+    <img src="../../img/travel/icon.png" class="nav-logo">
+    <div class="logo-container">
+      <img src="../../img/travel/japan-private-guide_logo.png" class="logo-image japan-private-guide" draggable="false" onclick="window.location.href='../contact'; return false;" style="cursor: pointer;">
+      <img src="../../img/travel/the-guide-group_it.png" class="logo-image the-guide-group" draggable="false" onclick="window.location.href='../contact'; return false;" style="cursor: pointer;">
+    </div>
+    <div class="lang-wrapper" id="lang-wrapper">
+    <div id="lang-toggle">
+      <img class="lang-flag" src="../../img/travel/lang.png">
+      <span>Italiano&nbsp; &#9662;</span>
+    </div>
+    <div id="lang-dropdown">
+      <ul>
+        <li><a href="#"><img class="lang-flag" src="https://flagcdn.com/w80/it.png">Italiano</a></li>
+        <li><a href="#"><img class="lang-flag" src="https://flagcdn.com/w80/jp.png">日本語</a></li>
+      </ul>
+    </div>
+  </div>
+  </div>
+
+<div class="mobile-controls">
+<a href="#" class="cart-link"><img src="../../img/travel/cart.png" class="cart-image"></a>
+  <div id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+  <div class="nav-right">
+    <a href="#" onclick="scrollToCategory('about'); return false;" class="nav-link">Chi Sono</a>
+    <a href="#" onclick="scrollToCategory('bookable'); return false;" class="nav-link">Date Disponibili</a>
+    <a href="#" onclick="scrollToCategory('booking'); return false;" class="nav-link">Prenotazioni</a>
+    <a href="#" onclick="scrollToCategory('before'); return false;" class="nav-link">Prima di Prenotare</a>
+    <a href="#" onclick="scrollToCategory('vehicle'); return false;" class="nav-link">Van Privato</a>
+    <a href="#" onclick="scrollToCategory('stories'); return false;" class="nav-link">Storie degli Ospiti</a>
+    <a href="../faq" target="_blank" class="btn btn-b">FAQ</a>
+    <a href="../contact" target="_blank" class="btn btn-a">Contatti</a>
+  </div>
+</header>
+
+<!-- Top Section -->
+  <div class="top-section">
+  <div id="video-container" data-video-id="lhxe2f_xEpo" data-thumbnail="1.jpg">
+    <img src="1.jpg">
+    <div class="play-button">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="#ff3399">
+       <path d="M8.5,6 Q8,6.5 8,7 L8,17 Q8,17.5 8.5,18 Q9,18.3 9.5,18 L17,12.5 Q17.5,12 17,11.5 L9.5,6 Q9,5.7 8.5,6 Z">
+     </svg>
+    </div>
+  </div>
+
+<div class="image-grid">
+  <img src="2.jpg">
+  <img src="3.jpg">
+  <img src="4.jpg">
+  <div class="sub-grid">
+    <img src="5.jpg">
+    <img src="6.jpg">
+    <img src="7.jpg">
+    <img src="8.jpg">
+  </div>
+</div>
+</div>
+
+  <div id="lightbox" class="lightbox hidden">
+    <span class="close-btn" id="lightbox-close">&times;</span>
+    <img id="lightbox-img" src="" alt="Immagine Lightbox">
+    <div class="nav left" id="prev-btn">&#10094;</div>
+    <div class="nav right" id="next-btn">&#10095;</div>
+  </div>
+<div style="height: 25px;"></div>
+
+<!-- About Section -->
+<div class="city-guides" style="text-align: center;">
+<div id="about"></div>
+<div id="map-container">
+<h2>Chi Sono</h2>
+<div class="cert-hover-wrapper">
+  <input type="checkbox" id="cert-toggle" class="cert-toggle">
+  <div class="cert-popup">
+    <img src="licensed.jpg" alt="Certification">
+    <label for="cert-toggle" class="cert-close">×</label>
+  </div>
+  <div class="package-title">
+    <div class="cert-wrapper">
+      Guida Turistica Certificata dal Governo Giapponese<br>
+      <label for="cert-toggle" class="cert-label">
+        <font class="nav-link" style="cursor: pointer;"><b>🪪 Numero identificativo: IT00042</b></font>
+      </label>
+    </div>
+  </div>
+</div>
+
+<div class="guide-list">
+<div class="about-section">
+  <div style="display: inline-block; width: 22%; vertical-align: top;">
+    <img src="avatar.jpg" width="88%" height="auto" style="border-radius: 50%; background-color: #ff3399;">
+  </div>
+  <div style="display: inline-block; width: 75%; color: #999; text-align: left;">
+    <div class="read-more" id="about-text">
+<table class="guide-info-table">
+  <tr>
+    <th>Nome del Membro</th>
+    <td>Nobu Ishigaki<span class="other-name"> (石垣信子)</span></td>
+  </tr>
+  <tr>
+    <th>Località di Base</th>
+    <td>Tokyo, Giappone</td>
+  </tr>
+  <tr>
+    <th>Principali Aree di Servizio</th>
+    <td>Tokyo, Osaka, Kyoto, Hiroshima, Nikko, Hakone, Takayama, Kanazawa</td>
+  </tr>
+  <tr>
+    <th>Altre Aree di Servizio</th>
+    <td>Conosco il Giappone da nord a sud – ti accompagnerò in un viaggio indimenticabile attraverso tutto il Paese.^^</td>
+  </tr>
+  <tr>
+    <th>Lingue</th>
+    <td>Italiano, Japanese</td>
+  </tr>
+</table>
+    <div style="height: 8px;"></div>
+      Mi chiamo Nobu e da piu’ di 10 anni faccio una guida turistica.<br>
+      Ho accompagnato numerosi ospiti di vostri concittadini in visita in Giappone per scopi turistici o per affari.<br>
+      Ho capito infine, quanto sia importante comprendere a fondo quelle che sono le esigenze particolari del turista italiano o dell’uomo d’affari ed accompagnarlo permettendogli al tempo stesso di capire quelle che sono le tradizioni del Giappone e assaporarne al massimo grado l’ospitalità.<br>
+      Potete essere sicuri di trovare in me tutta l’abilità ed esperienza necessaria a farvi scoprire la storia, i tesori della natura e la cultura del Giappone così affascinante per voi proprio perché molto differente.<br>
+      Grazie alla mia dedizione, potrete fare un’esperienza dell’Estremo Oriente e al tempo stesso sentivi come in famiglia.<br>
+      <br>
+      Sentiti libero di contattarmi tramite email <a href="mailto:nobu@theguidegroup.org" class="nav-link"><b>nobu@theguidegroup.org</b></a> o via videochiamata su <a href="chat" class="nav-link"><b>Guide Meet</b></a>, nella mia sala. Potrei non essere sempre online, quindi ti prego di contattarmi prima via e-mail.
+    </div>
+    <span class="read-toggle" id="toggle-text" data-more-it="Leggi di più" data-less-it="Leggi di meno">Leggi di più</span><span style="color: #ddd;">&nbsp; |&nbsp; </span><a href="#" onclick="scrollToCategory('booking'); return false;" class="read-toggle">Prenota Ora</a>
+  </div>
+</div>
+</div>
+<div class="container">
+    <div class="carousel-img" style="width: 100%; height: 100%;">
+      <a href="../attractions/meiji-shrine">
+        <img src="../../img/travel/attractions/meiji-shrine.jpg" alt="Santuario Meiji">
+        <div class="caption">Santuario Meiji</div>
+      </a>
+    </div>
+    <div class="carousel-img" style="width: 100%; height: 100%;">
+      <a href="../attractions/osaka-castle">
+        <img src="../../img/travel/attractions/osaka-castle.jpg" alt="Castello di Osaka">
+        <div class="caption">Castello di Osaka</div>
+      </a>
+    </div>
+    <div class="carousel-img" style="width: 100%; height: 100%;">
+      <a href="../attractions/arakurayama-sengen-park">
+        <img src="../../img/travel/attractions/arakurayama-sengen-park.jpg" alt="Parco Arakurayama Sengen">
+        <div class="caption">Parco Arakurayama Sengen</div>
+      </a>
+    </div>
+    <div class="carousel-img" style="width: 100%; height: 100%;">
+      <a href="../attractions/nara-park">
+        <img src="../../img/travel/attractions/nara-park.jpg" alt="Parco di Nara">
+        <div class="caption">Parco di Nara</div>
+      </a>
+    </div>
+    <div class="carousel-img" style="width: 100%; height: 100%;">
+      <a href="../attractions/kinkaku-ji">
+        <img src="../../img/travel/attractions/kinkaku-ji.jpg" alt="Padiglione d'Oro (Kinkaku-ji)">
+        <div class="caption">Padiglione d'Oro (Kinkaku-ji)</div>
+      </a>
+    </div>
+    <div class="carousel-img" style="width: 100%; height: 100%;">
+      <a href="../attractions/kiyomizu-dera">
+        <img src="../../img/travel/attractions/kiyomizu-dera.jpg" alt="Tempio Kiyomizu-dera">
+        <div class="caption">Tempio Kiyomizu-dera</div>
+      </a>
+    </div>
+    <div class="carousel-img" style="width: 100%; height: 100%;">
+      <a href="../attractions/fushimi-inari">
+        <img src="../../img/travel/attractions/fushimi-inari.jpg" alt="Santuario Fushimi Inari Taisha">
+        <div class="caption">Santuario Fushimi Inari Taisha</div>
+      </a>
+    </div>
+    <div class="carousel-img" style="width: 100%; height: 100%;">
+      <a href="../attractions/senso-ji">
+        <img src="../../img/travel/attractions/senso-ji.jpg" alt="Tempio Sensō-ji">
+        <div class="caption">Tempio Sensō-ji</div>
+      </a>
+    </div>
+</div>
+</div>
+<p></p>
+
+<!-- Calendar Section -->
+<div class="city-guides">
+<div id="bookable"></div>
+<div id="map-container">
+<h2>Date Disponibili</h2>
+<div class="package-title">Sentiti libero di contattarmi tramite email <a href="mailto:nobu@theguidegroup.org" class="nav-link"><b>nobu@theguidegroup.org</b></a> o via videochiamata su <a href="chat" class="nav-link"><b>Guide Meet</b></a>, nella mia sala. Potrei non essere sempre online, quindi ti prego di contattarmi prima via e-mail.</div>
+<div class="guide-list">
+</div>
+</div>
+<p></p>
+
+<!-- Booking Section -->
+<div class="city-guides">
+<div id="booking"></div>
+<div id="map-container">
+<h2>Pacchetti Esperienza Multi-Giorno</h2>
+<div class="package-title">Tour rilassati di più giorni per famiglie e piccoli gruppi.</div>
+<div class="guide-list">
+
+<a href="booking" class="guide-card" target="_blank">
+  <div class="guide-rating level-high toggle-tooltip">
+    Fuga Veloce
+    <span class="tooltip-icon tooltip-icon-booking-it"></span>
+  </div>
+  <div class="discount-badge">4% SCONTO</div>
+  <div class="guide-content">
+    <img src="avatar.jpg" class="guide-avatar" style="margin-bottom: 8px;">
+    <div class="guide-name">Nobu Ishigaki</div>
+    <div class="guide-languages">
+      <span class="lang-tag"><img src="https://flagcdn.com/w80/it.png"> Italiano</span>
+      <span class="lang-tag"><img src="https://flagcdn.com/w80/jp.png"> 日本語</span>
+    </div>
+    <div class="package-name">2<span style="font-size: 16px;"> giorni</span></div>
+    <div class="guide-name">€476/giorno (€59/ora)</div>
+    <div class="guide-price">Tutte le spese di servizio incluse</div>
+    <div class="guide-price">€62/ora straordinario dopo 8 ore</div>
+    <input type="submit" value="Prenota Ora – Senza Registrazione">
+    <div class="guide-note">Solo deposito del 20% per prenotare<br>Paga il resto al momento dell'incontro</div>
+    <img src="../../img/travel/payment.png" width="100%" height="auto">
+  </div>
+</a>
+
+<a href="booking" class="guide-card" target="_blank">
+  <div class="guide-rating level-high toggle-tooltip">
+    Tour Essenziale
+    <span class="tooltip-icon tooltip-icon-booking-it"></span>
+  </div>
+  <div class="discount-badge">10% SCONTO</div>
+  <div class="tooltip-recommended">✔ Consigliato</div>
+  <div class="guide-content">
+    <img src="avatar.jpg" class="guide-avatar" style="margin-bottom: 8px;">
+    <div class="guide-name">Nobu Ishigaki</div>
+    <div class="guide-languages">
+      <span class="lang-tag"><img src="https://flagcdn.com/w80/it.png"> Italiano</span>
+      <span class="lang-tag"><img src="https://flagcdn.com/w80/jp.png"> 日本語</span>
+    </div>
+    <div class="package-name">3<span style="font-size: 16px;"> giorni</span></div>
+    <div class="guide-name">€446/giorno (€55/ora)</div>
+    <div class="guide-price">Tutte le spese di servizio incluse</div>
+    <div class="guide-price">€62/ora straordinario dopo 8 ore</div>
+    <input type="submit" value="Prenota Ora – Senza Registrazione">
+    <div class="guide-note">Solo deposito del 20% per prenotare<br>Paga il resto al momento dell'incontro</div>
+    <img src="../../img/travel/payment.png" width="100%" height="auto">
+  </div>
+</a>
+
+<a href="booking" class="guide-card" target="_blank">
+  <div class="guide-rating level-priority toggle-tooltip">
+    Tour Esploratore
+    <span class="tooltip-icon tooltip-icon-booking-it"></span>
+  </div>
+  <div class="discount-badge">17% SCONTO</div>
+  <div class="tooltip-mostpopular">⭐ Il più popolare ⭐</div>
+  <div class="guide-content">
+    <img src="avatar.jpg" class="guide-avatar" style="margin-bottom: 8px;">
+    <div class="guide-name">Nobu Ishigaki</div>
+    <div class="guide-languages">
+      <span class="lang-tag"><img src="https://flagcdn.com/w80/it.png"> Italiano</span>
+      <span class="lang-tag"><img src="https://flagcdn.com/w80/jp.png"> 日本語</span>
+    </div>
+    <div class="package-name">5<span style="font-size: 16px;"> giorni</span></div>
+    <div class="guide-name">€412/giorno (€51/ora)</div>
+    <div class="guide-price">Tutte le spese di servizio incluse</div>
+    <div class="guide-price">€62/ora straordinario dopo 8 ore</div>
+    <input type="submit" value="Prenota Ora – Senza Registrazione">
+    <div class="guide-note">Solo deposito del 20% per prenotare<br>Paga il resto al momento dell'incontro</div>
+    <img src="../../img/travel/payment.png" width="100%" height="auto">
+  </div>
+</a>
+
+<a href="booking" class="guide-card" target="_blank">
+  <div class="guide-rating level-high toggle-tooltip">
+    Gran Tour
+    <span class="tooltip-icon tooltip-icon-booking-it"></span>
+  </div>
+  <div class="discount-badge">18% SCONTO</div>
+  <div class="tooltip-bestvalue">✔ Miglior Valore</div>
+  <div class="guide-content">
+    <img src="avatar.jpg" class="guide-avatar" style="margin-bottom: 8px;">
+    <div class="guide-name">Nobu Ishigaki</div>
+    <div class="guide-languages">
+      <span class="lang-tag"><img src="https://flagcdn.com/w80/it.png"> Italiano</span>
+      <span class="lang-tag"><img src="https://flagcdn.com/w80/jp.png"> 日本語</span>
+    </div>
+    <div class="package-name">7<span style="font-size: 16px;"> giorni</span></div>
+    <div class="guide-name">€407/giorno (€50/ora)</div>
+    <div class="guide-price">Tutte le spese di servizio incluse</div>
+    <div class="guide-price">€62/ora straordinario dopo 8 ore</div>
+    <input type="submit" value="Prenota Ora – Senza Registrazione">
+    <div class="guide-note">Solo deposito del 20% per prenotare<br>Paga il resto al momento dell'incontro</div>
+    <img src="../../img/travel/payment.png" width="100%" height="auto">
+  </div>
+</a>
+</div>
+</div>
+<p></p>
+<div class="city-guides">
+<div id="map-container">
+<h2>Tour Orari Flessibili</h2>
+<div class="package-title">Perfetto per fughe brevi o viaggi su misura.</div>
+<div class="guide-list">
+
+<a href="booking" class="guide-card" target="_blank">
+  <div class="guide-rating level-high toggle-tooltip">
+    Tour Compatto
+    <span class="tooltip-icon tooltip-icon-booking-it"></span>
+  </div>
+  <div class="guide-content">
+    <img src="avatar.jpg" class="guide-avatar" style="margin-bottom: 8px;">
+    <div class="guide-name">Nobu Ishigaki</div>
+    <div class="guide-languages">
+      <span class="lang-tag"><img src="https://flagcdn.com/w80/it.png"> Italiano</span>
+      <span class="lang-tag"><img src="https://flagcdn.com/w80/jp.png"> 日本語</span>
+    </div>
+    <div class="package-name">4<span style="font-size: 16px;"> ore</span></div>
+    <div class="guide-name">€248 totale (€62/ora)</div>
+    <div class="guide-price">Tutte le spese di servizio incluse</div>
+    <div class="guide-price">€62/ora straordinario dopo 4 ore</div>
+    <input type="submit" value="Prenota Ora – Senza Registrazione">
+    <div class="guide-note">Solo deposito del 20% per prenotare<br>Paga il resto al momento dell'incontro</div>
+    <img src="../../img/travel/payment.png" width="100%" height="auto">
+  </div>
+</a>
+
+<a href="booking" class="guide-card" target="_blank">
+  <div class="guide-rating level-high toggle-tooltip">
+    Tour Bilanciato
+    <span class="tooltip-icon tooltip-icon-booking-it"></span>
+  </div>
+  <div class="guide-content">
+    <img src="avatar.jpg" class="guide-avatar" style="margin-bottom: 8px;">
+    <div class="guide-name">Nobu Ishigaki</div>
+    <div class="guide-languages">
+      <span class="lang-tag"><img src="https://flagcdn.com/w80/it.png"> Italiano</span>
+      <span class="lang-tag"><img src="https://flagcdn.com/w80/jp.png"> 日本語</span>
+    </div>
+    <div class="package-name">6<span style="font-size: 16px;"> ore</span></div>
+    <div class="guide-name">€372 totale (€62/ora)</div>
+    <div class="guide-price">Tutte le spese di servizio incluse</div>
+    <div class="guide-price">€62/ora straordinario dopo 6 ore</div>
+    <input type="submit" value="Prenota Ora – Senza Registrazione">
+    <div class="guide-note">Solo deposito del 20% per prenotare<br>Paga il resto al momento dell'incontro</div>
+    <img src="../../img/travel/payment.png" width="100%" height="auto">
+  </div>
+</a>
+
+<a href="booking" class="guide-card" target="_blank">
+  <div class="guide-rating level-priority toggle-tooltip">
+    Tour Giornaliero
+    <span class="tooltip-icon tooltip-icon-booking-it"></span>
+  </div>
+  <div class="tooltip-mostpopular">⭐ Il più popolare ⭐</div>
+  <div class="guide-content">
+    <img src="avatar.jpg" class="guide-avatar" style="margin-bottom: 8px;">
+    <div class="guide-name">Nobu Ishigaki</div>
+    <div class="guide-languages">
+      <span class="lang-tag"><img src="https://flagcdn.com/w80/it.png"> Italiano</span>
+      <span class="lang-tag"><img src="https://flagcdn.com/w80/jp.png"> 日本語</span>
+    </div>
+    <div class="package-name">8<span style="font-size: 16px;"> ore</span></div>
+    <div class="guide-name">€496 totale (€62/ora)</div>
+    <div class="guide-price">Tutte le spese di servizio incluse</div>
+    <div class="guide-price">€62/ora straordinario dopo 8 ore</div>
+    <input type="submit" value="Prenota Ora – Senza Registrazione">
+    <div class="guide-note">Solo deposito del 20% per prenotare<br>Paga il resto al momento dell'incontro</div>
+    <img src="../../img/travel/payment.png" width="100%" height="auto">
+  </div>
+</a>
+
+<a href="booking" class="guide-card" target="_blank">
+  <div class="guide-rating level-high toggle-tooltip">
+    Aggiunta Straordinari
+    <span class="tooltip-icon tooltip-icon-booking-it"></span>
+  </div>
+  <div class="guide-content">
+    <img src="avatar.jpg" class="guide-avatar" style="margin-bottom: 8px;">
+    <div class="guide-name">Nobu Ishigaki</div>
+    <div class="guide-languages">
+      <span class="lang-tag"><img src="https://flagcdn.com/w80/it.png"> Italiano</span>
+      <span class="lang-tag"><img src="https://flagcdn.com/w80/jp.png"> 日本語</span>
+    </div>
+    <div class="package-name">1<span style="font-size: 16px;"> ora</span></div>
+    <div class="guide-name">€62 totale</div>
+    <div class="guide-price">Disponibile post-pacchetto</div>
+    <div class="guide-price">* Non venduto singolarmente *</div>
+    <input type="submit" value="Prenota Ora – Senza Registrazione">
+    <div class="guide-note">Per 1 ora aggiuntiva di straordinario<br>Pagamento completo richiesto</div>
+    <img src="../../img/travel/payment.png" width="100%" height="auto">
+  </div>
+</a>
+</div>
+</div>
+<p></p>
+
+<!-- Before Section -->
+<div class="city-guides">
+  <div id="before"></div>
+  <div id="map-container">
+    <h2>Prima di Prenotare</h2>
+    <div class="package-title">Si prega di verificare questi dettagli chiave prima del tour.</div>
+
+    <table width="100%" style="margin: 0 auto; padding: 10px; border-radius: 12px; background-color: #fff0f6aa;">
+      <tr>
+        <td style="text-align: left;" class="before">
+        <div style="max-width: 600px; margin: 0 auto; padding: 0 20px;">
+           <h3>🌸 Politica di Cancellazione e Rimborso</h3>
+          <ul>
+            <li>Il deposito del 20% pagato per confermare la prenotazione non è rimborsabile in nessuna circostanza.</li>
+            <li>Il restante 80% della tariffa del tour è pagabile in persona il giorno del tour.</li>
+            <li>Ti preghiamo di avvisarci il prima possibile se devi cancellare o riprogrammare.</li>
+          </ul>
+
+          <h3>🌸 Punto di Incontro e Puntualità</h3>
+          <ul>
+            <li>Per favore arriva al punto di incontro concordato 10 minuti prima.</li>
+            <li>I tour partiranno entro 30 minuti dall'orario programmato.</li>
+            <li>Arrivi con oltre 30 minuti di ritardo saranno considerati no-show.</li>
+          </ul>
+
+          <h3>🌸 Pagamento e Servizio Guida</h3>
+          <ul>
+            <li>È richiesto un deposito del 20% per confermare la prenotazione. Il pagamento viene effettuato direttamente alla guida tramite PayPal o bonifico bancario.</li>
+            <li>Il restante 80% della tariffa del tour è pagabile in persona alla guida assegnata il giorno del tour.</li>
+            <li>Tutti i servizi di guida sono forniti in modo indipendente e la guida è responsabile della tua esperienza.</li>
+          </ul>
+
+          <h3>🌸 Orario di Inizio del Tour e Fatturazione</h3>
+          <ul>
+            <li>Il tempo del tour inizia all' <b>orario di incontro programmato</b>, non al tuo arrivo.</li>
+            <li>Arrivi in ritardo non influiscono sul periodo di fatturazione.</li>
+          </ul>
+
+          <h3>🌸 Straordinari e Costi Aggiuntivi</h3>
+          <ul>
+            <li>Gli straordinari saranno addebitati in base all'<b>\"Aggiunta Straordinari\"</b> indicata nel pacchetto.</li>
+            <li>Qualsiasi richiesta di estendere il tour deve essere confermata con la guida in anticipo.</li>
+          </ul>
+
+          <h3>🌸 Cosa è Incluso</h3>
+          <ul>
+            <li>La tariffa del tour include i servizi della guida e il supporto di coordinamento del gruppo.</li>
+            <li>Trasporto, pasti e biglietti per attrazioni non sono inclusi a meno che non sia esplicitamente indicato.</li>
+          </ul>
+
+          <h3>🌸 Meteo e Emergenze</h3>
+          <ul>
+            <li>I tour operano in tutte le condizioni meteorologiche normali, inclusa pioggia leggera o moderata</li>
+            <li>In caso di condizioni meteorologiche avverse o allerte ufficiali (es. tifoni o allerte di tempesta), potremmo riprogrammare o emettere un rimborso completo.</li>
+          </ul>
+
+          <h3>🌸 Avviso Fattura</h3>
+          <ul>
+            <li>Per la fatturazione relativa alla tariffa del servizio della guida, contatta direttamente la nostra guida.</li>
+            <li>Contattaci se hai bisogno di assistenza con la fatturazione.</li>
+          </ul>
+        </div>
+        </td>
+      </tr>
+    </table>
+</div>
+<p></p>
+
+<!-- Driver Section -->
+<img src="../../img/travel/luxury-van-it.png" alt="Prenota un veicolo privato con autista per il tuo gruppo e la tua guida!" style="width: 100%; max-width: 1080px; height: auto;">
+
+<div id="vehicle"></div>
+<div id="map-container">
+<h2>Van Privato Premium con Autista – 2025</h2>
+<div class="package-title">Con guida cert. e van privato, risparmia tempo e scopri più luoghi.</div>
+<div class="guide-list">
+
+<a href="../van" class="guide-card" target="_blank">
+  <div class="guide-rating level-priority toggle-tooltip">
+    🧑‍✈️ 6 passeggeri e autista
+    <span class="tooltip-icon tooltip-icon-vehicle-it"></span>
+  </div>
+  <div class="discount-badge">20％ SCONTO</div>
+  <div class="tooltip-vehicle">✔ Autista Pro</div>
+  <div class="guide-content">
+    <img src="../../img/travel/toyota-alphard.png" width="220">
+    <div class="guide-name">Toyota Alphard<br>Compatibile con il tour<br>Città dell'area di Tokyo</div>
+    <div class="guide-languages">
+      <span class="lang-tag"><img src="../../img/travel/coordinates.png"> Tokyo</span>
+      <span class="lang-tag"><img src="../../img/travel/coordinates.png"> Mount Fuji</span>
+      <span class="lang-tag"><img src="../../img/travel/coordinates.png"> Yokohama</span>
+      <span class="lang-tag"><img src="../../img/travel/coordinates.png"> Hakone</span>
+      <span class="lang-tag"><img src="../../img/travel/coordinates.png"> Nikko</span>
+    </div>
+    <div class="guide-price">€464/giorno - Noleggio 1-7 giorni</div>
+    <div class="guide-price">€58/ora - Noleggio 4-6 ore</div>
+    <input type="submit" value="Prenota Ora – Senza Registrazione">
+    <div class="guide-note">Solo deposito del 20% per prenotare<br>
+      Paga il resto al momento dell'incontro</div>
+    <img src="../../img/travel/payment.png" width="100%" height="auto">
+  </div>
+</a>
+
+<a href="../van" class="guide-card" target="_blank">
+  <div class="guide-rating level-priority toggle-tooltip">
+    🧑‍✈️ 6 passeggeri e autista
+    <span class="tooltip-icon tooltip-icon-vehicle-it"></span>
+  </div>
+  <div class="discount-badge">20％ SCONTO</div>
+  <div class="tooltip-vehicle">✔ Autista Pro</div>
+  <div class="guide-content">
+    <img src="../../img/travel/mercedes-v-class.png" width="220">
+    <div class="guide-name">Mercedes-Benz V-Class<br>Compatibile con il tour<br>Città dell'area di Tokyo</div>
+    <div class="guide-languages">
+      <span class="lang-tag"><img src="../../img/travel/coordinates.png"> Tokyo</span>
+      <span class="lang-tag"><img src="../../img/travel/coordinates.png"> Mount Fuji</span>
+      <span class="lang-tag"><img src="../../img/travel/coordinates.png"> Yokohama</span>
+      <span class="lang-tag"><img src="../../img/travel/coordinates.png"> Hakone</span>
+      <span class="lang-tag"><img src="../../img/travel/coordinates.png"> Nikko</span>
+    </div>
+    <div class="guide-price">€464/giorno - Noleggio 1-7 giorni</div>
+    <div class="guide-price">€58/ora - Noleggio 4-6 ore</div>
+    <input type="submit" value="Prenota Ora – Senza Registrazione">
+    <div class="guide-note">Solo deposito del 20% per prenotare<br>
+      Paga il resto al momento dell'incontro</div>
+    <img src="../../img/travel/payment.png" width="100%" height="auto">
+  </div>
+</a>
+
+<a href="../van" class="guide-card" target="_blank">
+  <div class="guide-rating level-priority toggle-tooltip">
+    🧑‍✈️ 6 passeggeri e autista
+    <span class="tooltip-icon tooltip-icon-vehicle-it"></span>
+  </div>
+  <div class="discount-badge">20％ SCONTO</div>
+  <div class="tooltip-vehicle">✔ Autista Pro</div>
+  <div class="guide-content">
+    <img src="../../img/travel/toyota-alphard.png" width="220">
+    <div class="guide-name">Toyota Alphard<br>Compatibile con il tour<br>Città dell'area di Osaka</div>
+    <div class="guide-languages">
+      <span class="lang-tag"><img src="../../img/travel/coordinates.png"> Osaka</span>
+      <span class="lang-tag"><img src="../../img/travel/coordinates.png"> Kyoto</span>
+      <span class="lang-tag"><img src="../../img/travel/coordinates.png"> Kobe</span>
+      <span class="lang-tag"><img src="../../img/travel/coordinates.png"> Nara</span>
+      <span class="lang-tag"><img src="../../img/travel/coordinates.png"> Wakayama</span>
+    </div>
+    <div class="guide-price">€464/giorno - Noleggio 1-7 giorni</div>
+    <div class="guide-price">€58/ora - Noleggio 4-6 ore</div>
+    <input type="submit" value="Prenota Ora – Senza Registrazione">
+    <div class="guide-note">Solo deposito del 20% per prenotare<br>
+      Paga il resto al momento dell'incontro</div>
+    <img src="../../img/travel/payment.png" width="100%" height="auto">
+  </div>
+</a>
+
+<a href="../van" class="guide-card" target="_blank">
+  <div class="guide-rating level-priority toggle-tooltip">
+    🧑‍✈️ 6 passeggeri e autista
+    <span class="tooltip-icon tooltip-icon-vehicle-it"></span>
+  </div>
+  <div class="discount-badge">20％ SCONTO</div>
+  <div class="tooltip-vehicle">✔ Autista Pro</div>
+  <div class="guide-content">
+    <img src="../../img/travel/mercedes-v-class.png" width="220">
+    <div class="guide-name">Mercedes-Benz V-Class<br>Compatibile con il tour<br>Città dell'area di Osaka</div>
+    <div class="guide-languages">
+      <span class="lang-tag"><img src="../../img/travel/coordinates.png"> Osaka</span>
+      <span class="lang-tag"><img src="../../img/travel/coordinates.png"> Kyoto</span>
+      <span class="lang-tag"><img src="../../img/travel/coordinates.png"> Kobe</span>
+      <span class="lang-tag"><img src="../../img/travel/coordinates.png"> Nara</span>
+      <span class="lang-tag"><img src="../../img/travel/coordinates.png"> Wakayama</span>
+    </div>
+    <div class="guide-price">€464/giorno - Noleggio 1-7 giorni</div>
+    <div class="guide-price">€58/ora - Noleggio 4-6 ore</div>
+    <input type="submit" value="Prenota Ora – Senza Registrazione">
+    <div class="guide-note">Solo deposito del 20% per prenotare<br>
+      Paga il resto al momento dell'incontro</div>
+    <img src="../../img/travel/payment.png" width="100%" height="auto">
+  </div>
+</a>
+
+<a href="../van" class="guide-card" target="_blank">
+  <div class="guide-rating level-priority toggle-tooltip">
+    🧑‍✈️ 6 passeggeri e autista
+    <span class="tooltip-icon tooltip-icon-vehicle-it"></span>
+  </div>
+  <div class="discount-badge">20％ SCONTO</div>
+  <div class="tooltip-vehicle">✔ Autista Pro</div>
+  <div class="guide-content">
+    <img src="../../img/travel/toyota-alphard.png" width="220">
+    <div class="guide-name">Toyota Alphard<br>Compatibile con il tour<br>Città dell'area di Osaka</div>
+    <div class="guide-languages">
+      <span class="lang-tag"><img src="../../img/travel/coordinates.png"> Osaka</span>
+      <span class="lang-tag"><img src="../../img/travel/coordinates.png"> Kyoto</span>
+      <span class="lang-tag"><img src="../../img/travel/coordinates.png"> Kobe</span>
+      <span class="lang-tag"><img src="../../img/travel/coordinates.png"> Nara</span>
+      <span class="lang-tag"><img src="../../img/travel/coordinates.png"> Wakayama</span>
+    </div>
+    <div class="guide-price">€464/giorno - Noleggio 1-7 giorni</div>
+    <div class="guide-price">€58/ora - Noleggio 4-6 ore</div>
+    <input type="submit" value="Prenota Ora – Senza Registrazione">
+    <div class="guide-note">Solo deposito del 20% per prenotare<br>
+      Paga il resto al momento dell'incontro</div>
+    <img src="../../img/travel/payment.png" width="100%" height="auto">
+  </div>
+</a>
+
+<a href="../van" class="guide-card" target="_blank">
+  <div class="guide-rating level-priority toggle-tooltip">
+    🧑‍✈️ 6 passeggeri e autista
+    <span class="tooltip-icon tooltip-icon-vehicle-it"></span>
+  </div>
+  <div class="discount-badge">20％ SCONTO</div>
+  <div class="tooltip-vehicle">✔ Autista Pro</div>
+  <div class="guide-content">
+    <img src="../../img/travel/toyota-alphard.png" width="220">
+    <div class="guide-name">Toyota Alphard<br>Compatibile con il tour<br>Città dell’area di Fukuoka</div>
+    <div class="guide-languages">
+      <span class="lang-tag"><img src="../../img/travel/coordinates.png"> Fukuoka</span>
+      <span class="lang-tag"><img src="../../img/travel/coordinates.png"> Nagasaki</span>
+      <span class="lang-tag"><img src="../../img/travel/coordinates.png"> Beppu</span>
+      <span class="lang-tag"><img src="../../img/travel/coordinates.png"> Yufuin</span>
+      <span class="lang-tag"><img src="../../img/travel/coordinates.png"> Kumamoto</span>
+    </div>
+    <div class="guide-price">€464/giorno - Noleggio 1-7 giorni</div>
+    <div class="guide-price">€58/ora - Noleggio 4-6 ore</div>
+    <input type="submit" value="Prenota Ora – Senza Registrazione">
+    <div class="guide-note">Solo deposito del 20% per prenotare<br>
+      Paga il resto al momento dell'incontro</div>
+    <img src="../../img/travel/payment.png" width="100%" height="auto">
+  </div>
+</a>
+
+<a href="../van" class="guide-card" target="_blank">
+  <div class="guide-rating level-priority toggle-tooltip">
+    🧑‍✈️ 6 passeggeri e autista
+    <span class="tooltip-icon tooltip-icon-vehicle-it"></span>
+  </div>
+  <div class="discount-badge">20％ SCONTO</div>
+  <div class="tooltip-vehicle">✔ Autista Pro</div>
+  <div class="guide-content">
+    <img src="../../img/travel/toyota-alphard.png" width="220">
+    <div class="guide-name">Toyota Alphard<br>Compatibile con il tour<br>Città dell'area di Hokkaido</div>
+    <div class="guide-languages">
+      <span class="lang-tag"><img src="../../img/travel/coordinates.png"> Sapporo</span>
+      <span class="lang-tag"><img src="../../img/travel/coordinates.png"> Otaru</span>
+      <span class="lang-tag"><img src="../../img/travel/coordinates.png"> Furano</span>
+      <span class="lang-tag"><img src="../../img/travel/coordinates.png"> Biei</span>
+      <span class="lang-tag"><img src="../../img/travel/coordinates.png"> Asahikawa</span>
+    </div>
+    <div class="guide-price">€464/giorno - Noleggio 1-7 giorni</div>
+    <div class="guide-price">€58/ora - Noleggio 4-6 ore</div>
+    <input type="submit" value="Prenota Ora – Senza Registrazione">
+    <div class="guide-note">Solo deposito del 20% per prenotare<br>
+      Paga il resto al momento dell'incontro</div>
+    <img src="../../img/travel/payment.png" width="100%" height="auto">
+  </div>
+</a>
+
+<a href="../van" class="guide-card" target="_blank">
+  <div class="guide-rating level-priority toggle-tooltip">
+    🧑‍✈️ 6 passeggeri e autista
+    <span class="tooltip-icon tooltip-icon-vehicle-it"></span>
+  </div>
+  <div class="discount-badge">20％ SCONTO</div>
+  <div class="tooltip-vehicle">✔ Autista Pro</div>
+  <div class="guide-content">
+    <img src="../../img/travel/toyota-alphard.png" width="220">
+    <div class="guide-name">Toyota Alphard<br>Compatibile con il tour<br>Città dell’area di Okinawa</div>
+    <div class="guide-languages">
+      <span class="lang-tag"><img src="../../img/travel/coordinates.png"> Naha</span>
+      <span class="lang-tag"><img src="../../img/travel/coordinates.png"> Shurijo Castle</span>
+      <span class="lang-tag"><img src="../../img/travel/coordinates.png"> Onna Village</span>
+      <span class="lang-tag"><img src="../../img/travel/coordinates.png"> Kouri Island</span>
+      <span class="lang-tag"><img src="../../img/travel/coordinates.png"> Motobu Town</span>
+    </div>
+    <div class="guide-price">€464/giorno - Noleggio 1-7 giorni</div>
+    <div class="guide-price">€58/ora - Noleggio 4-6 ore</div>
+    <input type="submit" value="Prenota Ora – Senza Registrazione">
+    <div class="guide-note">Solo deposito del 20% per prenotare<br>
+      Paga il resto al momento dell'incontro</div>
+    <img src="../../img/travel/payment.png" width="100%" height="auto">
+  </div>
+</a>
+</div>
+</div>
+<p></p>
+
+<div class="city-guides" style="text-align: center;">
+<div class="attractions-3d">
+  <div class="attraction-item">
+    <a href="../attractions/itsukushima-shrine" target="_blank">
+      <img src="../../img/travel/icon-itsukushima-shrine.png" alt="Itsukushima Shrine">
+      <p>Itsukushima Shrine</p>
+    </a>
+  </div>
+  <div class="attraction-item">
+    <a href="../attractions/senso-ji" target="_blank">
+      <img src="../../img/travel/icon-senso-ji.png" alt="Senso-ji Temple">
+      <p>Senso-ji Temple</p>
+    </a>
+  </div>
+  <div class="attraction-item">
+    <a href="../attractions/kamakura-daibutsu" target="_blank">
+      <img src="../../img/travel/icon-kamakura-daibutsu.png" alt="Kamakura Daibutsu">
+      <p>Kamakura Daibutsu</p>
+    </a>
+  </div>
+  <div class="attraction-item">
+    <a href="../attractions/fuji-san" target="_blank">
+      <img src="../../img/travel/icon-fuji-san.png" alt="Mount Fuji Tour">
+      <p>Mount Fuji Tour</p>
+    </a>
+  </div>
+  <div class="attraction-item">
+    <a href="../attractions/tokyo-tower" target="_blank">
+      <img src="../../img/travel/icon-tokyo-tower.png" alt="Tokyo Tower">
+      <p>Tokyo Tower</p>
+    </a>
+  </div>
+  <div class="attraction-item">
+    <a href="../attractions/tokyo-disneyland" target="_blank">
+      <img src="../../img/travel/icon-tokyo-disneyland.png" alt="Tokyo Disneyland">
+      <p>Tokyo Disneyland</p>
+    </a>
+  </div>
+  <div class="attraction-item">
+    <a href="../attractions/sightseeing-bus" target="_blank">
+      <img src="../../img/travel/icon-sightseeing-bus.png" alt="Sightseeing Bus">
+      <p>Sightseeing Bus</p>
+    </a>
+  </div>
+  <div class="attraction-item">
+    <a href="../attractions/go-kart" target="_blank">
+      <img src="../../img/travel/icon-go-kart.png" alt="Go-Kart Experience">
+      <p>Go-Kart Experience</p>
+    </a>
+  </div>
+  <div class="attraction-item">
+    <a href="../attractions/osaka-castle" target="_blank">
+      <img src="../../img/travel/icon-osaka-castle.png" alt="Osaka Castle">
+      <p>Osaka Castle</p>
+    </a>
+  </div>
+  <div class="attraction-item">
+    <a href="../attractions/todai-ji" target="_blank">
+      <img src="../../img/travel/icon-todai-ji.png" alt="Todaiji Temple">
+      <p>Todaiji Temple</p>
+    </a>
+  </div>
+</div>
+
+<!-- Stories Section -->
+<div class="city-guides">
+<div id="stories"></div>
+<div id="map-container">
+<h2>Storie degli Ospiti</h2>
+<div class="package-title">Recensioni riferite al servizio TGG nel complesso, non a una singola guida.</div>
+<div class="guide-list">
+<a href="#" class="guide-card" target="_blank">
+  <div class="guide-content">
+  <div class="stars">★★★★★</div>
+  <b>Servizio Davvero Personalizzato e Professionale</b><br>
+  <div class="review">
+Guest Name: <b>Marco R.</b><br>
+Location: <b>Italia</b><br>
+Visited in: <b>Gennaio 2026</b><br>
+<br>
+Dall'inizio alla fine è stato tutto perfetto. Ciò che ci ha colpito è stato come la guida abbia adattato i racconti agli interessi del nostro gruppo, specialmente per mio figlio amante dell'architettura. È stata un'esperienza molto arricchente. Siamo stati inoltre contentissimi di aver prenotato il servizio con auto privata: ha reso tutto estremamente comodo.
+  </div>
+  </div>
+</a>
+
+<a href="#" class="guide-card" target="_blank">
+  <div class="guide-content">
+  <div class="stars">★★★★★</div>
+  <b>Guida Privata per Gruppi Ristretti</b><br>
+  <div class="review">
+Guest Name: <b>Anonimo (Belgio)</b><br>
+Location: <b>Belgio</b><br>
+Visited in: <b>Settembre 2025</b><br>
+<br>
+Viaggio di gruppo con 6 amici: la guida è stata paziente e molto flessibile. Il servizio con auto privata ha reso tutto più scorrevole. Qualche piccolo dettaglio da migliorare, ma complessivamente eccellente. Abbiamo prenotato il servizio di auto privata per 3 giorni, in 6 persone per ogni macchina, ed è stato un viaggio molto comodo e tranquillo.
+  </div>
+  </div>
+</a>
+
+<a href="#" class="guide-card" target="_blank">
+  <div class="guide-content">
+  <div class="stars">★★★★★</div>
+  <b>Eccellente Supporto per Viaggiatori Anziani</b><br>
+  <div class="review">
+Guest Name: <b>Margaret E.</b><br>
+Location: <b>Italia</b><br>
+Visited in: <b>Gennaio 2026</b><br>
+<br>
+Ho viaggiato con mia madre anziana e il team della guida è stato davvero premuroso. Hanno pianificato pause extra, l'hanno aiutata a camminare e hanno costantemente verificato il suo comfort. La loro attenzione ci ha dato tranquillità per tutto il viaggio.
+  </div>
+  </div>
+</a>
+
+<a href="#" class="guide-card" target="_blank">
+  <div class="guide-content">
+  <div class="stars">★★★★☆</div>
+  <b>Le Migliori Raccomandazioni Culinarie Locali di Sempre!</b><br>
+  <div class="review">
+Guest Name: <b>Jason W.</b><br>
+Location: <b>Italia</b><br>
+Visited in: <b>Dicembre 2025</b><br><br>
+Oltre ai luoghi stupendi, la guida ci ha portato in piccoli locali nascosti che i turisti non troverebbero da soli. Ogni pasto era delizioso e ricco di sapori locali. La guida non solo era preparata, ma anche genuinamente gentile e disponibile per tutto il viaggio. Veramente indimenticabile!
+  </div>
+  </div>
+</a>
+
+<a href="#" class="guide-card" target="_blank">
+  <div class="guide-content">
+  <div class="stars">★★★★☆</div>
+  <b>Un'esperienza indimenticabile grazie alla nostra guida</b><br>
+  <div class="review">
+Guest Name: <b>Carla M.</b><br>
+Location: <b>Italia</b><br>
+Visited in: <b>Gennaio 2025</b><br>
+<br>
+La guida è stata molto gentile e attenta durante tutto il percorso. Ci ha spiegato con passione ogni luogo che abbiamo visitato e ha mostrato molta pazienza con i miei bambini piccoli. Un'esperienza che non dimenticheremo mai! Devo dire che a luglio a Tokyo fa davvero molto caldo, ho sudato molto; avrei dovuto prenotare il servizio di auto privata insieme a loro.
+  </div>
+  </div>
+</a>
+
+<a href="#" class="guide-card" target="_blank">
+  <div class="guide-content">
+  <div class="stars">★★★★★</div>
+  <b>Scoperta Autentica del Giappone con Guida in Italiano</b><br>
+  <div class="review">
+Guest Name: <b>Anonimo</b><br>
+Location: <b>Italia</b><br>
+Visited in: <b>Dicembre 2025</b><br>
+<br>
+Viaggio in famiglia davvero ben organizzato. La guida parlava perfettamente italiano e ci ha fatto apprezzare angoli meno conosciuti del Giappone che da soli non avremmo scoperto. Consigliatissimo!
+  </div>
+  </div>
+</a>
+
+<a href="#" class="guide-card" target="_blank">
+  <div class="guide-content">
+  <div class="stars">★★★★★</div>
+  <b>Esperienza Perfetta per Viaggiatori Italiani</b><br>
+  <div class="review">
+Guest Name: <b>Anonimo (Svizzera italiana)</b><br>
+Location: <b>Svizzera</b><br>
+Visited in: <b>Aprile 2025</b><br>
+<br>
+Da solo in viaggio: la guida ha saputo personalizzare il tour in base ai miei interessi (storia e design). Auto privata e van erano comodi e puliti. Mi sono sentito in ottime mani.
+  </div>
+  </div>
+</a>
+
+<a href="#" class="guide-card" target="_blank">
+  <div class="guide-content">
+  <div class="stars">★★★★★</div>
+  <b>Momenti Memorabili e Cura dei Dettagli</b><br>
+  <div class="review">
+Guest Name: <b>Marco R.</b><br>
+Location: <b>Italia</b><br>
+Visited in: <b>Marzo 2025</b><br>
+<br>
+La guida ci ha seguito con entusiasmo, raccontando storia, arte, tradizioni locali e dandoci ottimi suggerimenti per i ristoranti. Il servizio auto ha fatto la differenza: comfort e libertà per esplorare.
+  </div>
+  </div>
+</a>
+</div>
+</div>
+<p></p>
+<div id="footer"></div>
+<script>
+  fetch('../footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer').innerHTML = data;
+    })
+    .catch(error => console.error('© 2026 The Guide Group All rights reserved.', error));
+</script>
+
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6957179d06ed52198625406d/1jf6iqs32';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+
+</body>
+</html>
