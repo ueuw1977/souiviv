@@ -249,7 +249,7 @@ text-decoration: none;
   left: 0;
   width: 220px;
   height: 178px;
-  background-image: url('../img/bg_left.png');
+  background-image: url('img/bg_left.png');
   background-size: contain;
   background-repeat: no-repeat;
   pointer-events: none;
@@ -262,7 +262,7 @@ text-decoration: none;
   right: 0;
   width: 130px;
   height: 190px;
-  background-image: url('../img/bg_right.png');
+  background-image: url('img/bg_right.png');
   background-size: contain;
   background-repeat: no-repeat;
   pointer-events: none;
@@ -275,7 +275,7 @@ text-decoration: none;
   left: 0;
   width: 104px;
   height: 152px;
-  background-image: url('../img/bg_left2.png');
+  background-image: url('img/bg_left2.png');
   background-size: contain;
   background-repeat: no-repeat;
   pointer-events: none;
@@ -288,7 +288,7 @@ text-decoration: none;
   right: 0;
   width: 142px;
   height: 176px;
-  background-image: url('../img/bg_right2.png');
+  background-image: url('img/bg_right2.png');
   background-size: contain;
   background-repeat: no-repeat;
   pointer-events: none;
@@ -420,28 +420,6 @@ transform: rotate(360deg);
   border: 1px solid #ff69b4;
 }
 
-.guide-avatar-wrapper::after {
-  content: '▶';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 24px;
-  color: #ff3399;
-  background-color: rgba(255, 255, 255, 0.8);
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.2s ease;
-  pointer-events: none;
-  border: 1px solid rgba(255, 255, 255, 0.9);
-  z-index: 2;
-}
-
 .guide-avatar-wrapper:hover::after {
   opacity: 1;
 }
@@ -459,6 +437,7 @@ transform: rotate(360deg);
   object-fit: cover;
   display: block;
   z-index: 1;
+  pointer-events: none;
 }
 
 .guide-avatar-wrapper img:hover {
@@ -774,27 +753,39 @@ input[type="submit"]:hover {
 }
 
 .tooltip-icon-booking-en::after {
-  content: "Our private guided tour service is specially designed for small groups, with a recommended group size of up to 10–12 people. Whether you're traveling solo or with friends and family, we offer a fixed group rate, and pricing is not based on the number of participants, making it easier for you to plan your trip with peace of mind.";
+  content: "Our private guided tour service is specially designed for small groups, with a recommended group size of up to 1–15 people. Whether you're traveling solo or with friends and family, we offer a fixed group rate, and pricing is not based on the number of participants, making it easier for you to plan your trip with peace of mind.";
+}
+
+.tooltip-icon-booking-fr::after {
+  content: "Notre service de visites privées avec guide est conçu pour les petits groupes, avec un nombre recommandé de participants de 1 à 15 personnes. Que vous voyagiez seul ou accompagné de vos amis et famille, nous proposons un tarif fixe par groupe, quel que soit le nombre de participants, ce qui facilite l'organisation de votre voyage en toute sérénité.";
+}
+
+.tooltip-icon-booking-de::after {
+  content: "Unser privater Führungsservice ist speziell für kleine Gruppen konzipiert und eignet sich ideal für 1 bis 15 Personen. Ob Sie allein, mit Freunden oder mit der Familie reisen – wir bieten einen festen Gruppenpreis an. Der Preis richtet sich nicht nach der Anzahl der Teilnehmer, sodass Sie Ihre Reise transparent und sorgenfrei planen können.";
+}
+
+.tooltip-icon-booking-es::after {
+  content: "Nuestro servicio de visitas guiadas privadas está especialmente diseñado para grupos pequeños y es ideal para 1 a 15 personas. Ya sea que viaje solo, con amigos o en familia, ofrecemos una tarifa fija por grupo. El precio no depende del número de participantes, lo que le permite planificar su viaje con mayor tranquilidad y claridad.";
 }
 
 .tooltip-icon-booking-ja::after {
-  content: "当社のプライベートガイドサービスは、小規模グループ向けに設計されており、推奨人数は最大10〜12名までとなっております。お一人様のご参加でも、ご家族やご友人とのグループ旅行でも、料金は一律のグループ料金となっており、人数によって価格は変わりません。人数を気にせず、安心してご旅行の計画を立てていただけます。";
+  content: "プライベートガイドサービスは、小規模グループ向けに設計されており、推奨人数は最大1〜15名までとなっております。お一人様のご参加でも、ご家族やご友人とのグループ旅行でも、料金は一律のグループ料金となっており、人数によって価格は変わりません。人数を気にせず、安心してご旅行の計画を立てていただけます。";
 }
 
 .tooltip-icon-booking-ko::after {
-  content: "저희의 프라이빗 가이드 투어 서비스는 소규모 그룹을 위해 설계되었으며, 권장 인원은 최대 10~12명입니다. 혼자 여행하시든, 가족이나 친구들과 함께하시든 요금은 인원수에 관계없이 동일한 그룹 요금으로 책정됩니다. 인원수를 걱정하지 않고, 보다 자유롭게 여행 일정을 계획하실 수 있습니다.";
+  content: "저희의 프라이빗 가이드 투어 서비스는 소규모 그룹을 위해 설계되었으며, 권장 인원은 최대 1~15명입니다. 혼자 여행하시든, 가족이나 친구들과 함께하시든 요금은 인원수에 관계없이 동일한 그룹 요금으로 책정됩니다. 인원수를 걱정하지 않고, 보다 자유롭게 여행 일정을 계획하실 수 있습니다.";
 }
 
 .tooltip-icon-booking-zh-tw::after {
-  content: "我們提供的私人導遊服務專為小型團體設計，建議人數上限為 10～12 人。無論您是一人獨旅，或是一群親友同行，我們皆採用固定團費制，不另按人數收費，讓您更輕鬆規劃行程。";
+  content: "我們提供的私人導遊服務專為小型團體設計，建議人數上限為 1～15 人。無論您是一人獨旅，或是一群親友同行，我們皆採用固定團費制，不另按人數收費，讓您更輕鬆規劃行程。";
 }
 
 .tooltip-icon-booking-it::after {
-  content: "Il nostro servizio di tour privati con guida è pensato appositamente per piccoli gruppi, con un numero consigliato di partecipanti fino a 10–12 persone. Che tu stia viaggiando da solo o con amici e familiari, offriamo una tariffa fissa per gruppo, e il prezzo non varia in base al numero di partecipanti, rendendo più semplice organizzare il tuo viaggio in tutta tranquillità.";
+  content: "Il nostro servizio di tour privati con guida è pensato appositamente per piccoli gruppi, con un numero consigliato di partecipanti fino a 1–15 persone. Che tu stia viaggiando da solo o con amici e familiari, offriamo una tariffa fissa per gruppo, e il prezzo non varia in base al numero di partecipanti, rendendo più semplice organizzare il tuo viaggio in tutta tranquillità.";
 }
 
 .tooltip-icon-en::after {
-  content: "This rating is provided by the guide group based on a comprehensive evaluation of the member’s service quality, communication, delivery record, and client feedback. It is not solely based on user reviews and is offered for reference only. It does not constitute a guarantee of service outcomes.";
+  content: "This rating is provided by TGG based on a comprehensive evaluation of the member’s service quality, communication, delivery record, and client feedback. It is not solely based on user reviews and is offered for reference only. It does not constitute a guarantee of service outcomes.";
 }
 
 .tooltip-icon-ja::after {
@@ -809,12 +800,23 @@ input[type="submit"]:hover {
   content: "本團體依據成員之服務品質、溝通表現、完成紀錄與客戶反饋進行綜合評估，提供此評分作為官方推薦指標。該評分並非完全根據客戶評價，僅供參考，亦不保證服務結果。";
 }
 
+.tooltip-icon-fr::after {
+  content: "Cette évaluation est fournie par le groupe de guides, basée sur une appréciation globale de la qualité du service du membre, de la communication, des performances et des retours des clients. Elle ne repose pas uniquement sur les avis des utilisateurs et est donnée à titre informatif. Elle ne garantit pas les résultats du service.";
+}
+.tooltip-icon-de::after {
+  content: "Diese Bewertung wird von der Gruppe der Guides auf der Grundlage einer Gesamtbeurteilung der Servicequalität des Mitglieds, der Kommunikation, der Leistung und des Kundenfeedbacks bereitgestellt. Sie basiert nicht ausschließlich auf Nutzerbewertungen und dient nur zu Informationszwecken. Sie stellt keine Garantie für die Ergebnisse des Services dar.";
+}
+
+.tooltip-icon-es::after {
+  content: "Esta evaluación es proporcionada por el grupo de guías basándose en una valoración general de la calidad del servicio del miembro, la comunicación, el desempeño y los comentarios de los clientes. No se basa exclusivamente en las reseñas de los usuarios y se ofrece únicamente con fines informativos. No constituye una garantía de los resultados del servicio.";
+}
+
 .tooltip-icon-it::after {
   content: "Questa valutazione viene fornita dal gruppo di guide basandosi su una valutazione complessiva della qualità del servizio del membro, della comunicazione, del rendimento e del feedback dei clienti. Non si basa esclusivamente sulle recensioni degli utenti ed è offerta solo a scopo informativo. Non costituisce una garanzia dei risultati del servizio.";
 }
 
 .tooltip-icon-en::after {
-  content: "This rating is provided by the guide group based on a comprehensive evaluation of the member’s service quality, communication, delivery record, and client feedback. It is not solely based on user reviews and is offered for reference only. It does not constitute a guarantee of service outcomes.";
+  content: "This rating is provided by TGG based on a comprehensive evaluation of the member’s service quality, communication, delivery record, and client feedback. It is not solely based on user reviews and is offered for reference only. It does not constitute a guarantee of service outcomes.";
 }
 
 .tooltip-icon-vehicle-en::after {
@@ -833,8 +835,20 @@ input[type="submit"]:hover {
   content: "本集團僅協助預約包車服務，實際包車服務由本集團合作夥伴公司提供並全權負責。請於服務當天，將包車費用直接支付給合作的司機。如有需要，您可通知導遊，導遊將協助您與司機聯絡。";
 }
 
+.tooltip-icon-vehicle-fr::after {
+  content: "Notre groupe se charge uniquement de faciliter la réservation du service de location de voiture avec chauffeur. Le service de transport proprement dit est entièrement fourni et géré par notre compagnie partenaire. Veuillez régler la tarification directement au chauffeur le jour du service. Si vous avez besoin d’assistance, votre guide touristique pourra vous aider à communiquer avec le chauffeur.";
+}
+
 .tooltip-icon-vehicle-it::after {
   content: "Il nostro gruppo si occupa solo di facilitare la prenotazione del servizio di noleggio auto con conducente. Il servizio di trasporto vero e proprio è fornito e gestito interamente dalla nostra compagnia partner. Si prega di pagare la tariffa direttamente all’autista il giorno del servizio. Se avete bisogno di assistenza, la vostra guida turistica potrà aiutarvi a comunicare con l’autista.";
+}
+
+.tooltip-icon-vehicle-de::after {
+  content: "Unsere Gruppe übernimmt lediglich die Vermittlung der Buchung des Fahrdienstes. Der tatsächliche Transport wird vollständig von unserem Partnerunternehmen bereitgestellt und durchgeführt. Bitte zahlen Sie die Gebühr direkt an den Fahrer am Tag des Service. Wenn Sie Hilfe benötigen, kann Ihr Reiseleiter Ihnen bei der Kommunikation mit dem Fahrer behilflich sein.";
+}
+
+.tooltip-icon-vehicle-es::after {
+  content: "Nuestro grupo solo se encarga de facilitar la reserva del servicio de alquiler de auto con conductor. El servicio de transporte propiamente dicho es proporcionado y gestionado íntegramente por nuestra compañía asociada. Por favor, pague la tarifa directamente al conductor el día del servicio. Si necesita asistencia, su guía turístico podrá ayudarle a comunicarse con el conductor.";
 }
 
 .tooltip-icon::after {
@@ -956,19 +970,19 @@ input[type="submit"]:hover {
 }
 
 .tooltip-certified-en::after {
-  content: "This guide is certified and endorsed by The Guide Group, demonstrating international-level professionalism and service excellence.";
+  content: "This guide is certified and endorsed by TGG, demonstrating international-level professionalism and service excellence.";
 }
 
 .tooltip-certified-ja::after {
-  content: "本ガイドは The Guide Group により認定および推薦されており、国際水準の専門性とサービス品質を備えています。";
+  content: "本ガイドは TGG により認定および推薦されており、国際水準の専門性とサービス品質を備えています。";
 }
 
 .tooltip-certified-ko::after {
-  content: "본 가이드는 The Guide Group의 인증과 추천을 받은 국제 수준의 전문성과 서비스 품질을 갖춘 전문가입니다.";
+  content: "본 가이드는 TGG의 인증과 추천을 받은 국제 수준의 전문성과 서비스 품질을 갖춘 전문가입니다.";
 }
 
 .tooltip-certified-zh-tw::after {
-  content: "本導遊榮獲 The Guide Group 認證與推薦，具備國際級專業素養與服務水準。";
+  content: "本導遊榮獲 TGG 認證與推薦，具備國際級專業素養與服務水準。";
 }
 
 .tooltip-certified::after {
@@ -1113,7 +1127,7 @@ max-width: calc(20% - 1px);
   left: 0;
   width: 0;
   height: 0;
-  background-image: url('img/icon-selected.png');
+  background-image: url('../img/travel/icon-selected.png');
   background-size: contain;
   background-repeat: no-repeat;
   transition: transform 0.4s ease, width 0.4s ease, height 0.4s ease;
