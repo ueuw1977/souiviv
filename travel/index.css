@@ -752,6 +752,26 @@ input[type="submit"]:hover {
   background: #fff;
 }
 
+.tooltip-icon-consultation-en::after {
+  content: "This consultation can be upgraded to a private guided tour. If you book the same itinerary's guided tour after the consultation, the consultation fee can be applied toward the tour price.";
+}
+
+.tooltip-icon-consultation-fr::after {
+  content: "Cette consultation peut être upgradée en visite guidée privée. Si vous réservez les services d’un guide pour le même itinéraire après la consultation, les frais de consultation peuvent être déduits du prix de la visite.";
+}
+
+.tooltip-icon-consultation-it::after {
+  content: "Questa consulenza può essere upgradato in un tour guidato privato. Se prenoti i servizi di guida per lo stesso itinerario dopo la consulenza, la quota della consulenza può essere detratta dal prezzo del tour.";
+}
+
+.tooltip-icon-consultation-es::after {
+  content: "Esta consulta puede ser potenciada a un tour guiado privado. Si reservas los servicios de un guía para el mismo itinerario después de la consulta, la tarifa de la consulta se puede aplicar al precio del tour.";
+}
+
+.tooltip-icon-consultation-de::after {
+  content: "Diese Beratung kann in eine private geführte Tour aufgewertet werden. Wenn Sie nach der Beratung die Führungsdienste für dieselbe Reiseroute buchen, kann die Beratungsgebühr auf den Tourpreis angerechnet werden.";
+}
+
 .tooltip-icon-booking-en::after {
   content: "Our private guided tour service is specially designed for small groups, with a recommended group size of up to 1–15 people. Whether you're traveling solo or with friends and family, we offer a fixed group rate, and pricing is not based on the number of participants, making it easier for you to plan your trip with peace of mind.";
 }
