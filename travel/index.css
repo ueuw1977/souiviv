@@ -765,11 +765,11 @@ input[type="submit"]:hover {
 }
 
 .tooltip-icon-consultation-es::after {
-  content: "Esta consulta puede ser potenciada a un tour guiado privado. Si reservas los servicios de un guía para el mismo itinerario después de la consulta, la tarifa de la consulta se puede aplicar al precio del tour.";
+  content: "Esta consulta puede ser mejorada a un tour guiado privado. Si reservas los servicios de un guía para el mismo itinerario después de la consulta, la tarifa de la consulta se puede aplicar al precio del tour.";
 }
 
 .tooltip-icon-consultation-de::after {
-  content: "Diese Beratung kann in eine private geführte Tour aufgewertet werden. Wenn Sie nach der Beratung die Führungsdienste für dieselbe Reiseroute buchen, kann die Beratungsgebühr auf den Tourpreis angerechnet werden.";
+  content: "Diese Beratung kann zu einer privaten geführten Tour aufgewertet werden. Wenn Sie nach der Beratung die Führungsdienste für dieselbe Reiseroute buchen, kann die Beratungsgebühr auf den Tourpreis angerechnet werden.";
 }
 
 .tooltip-icon-booking-en::after {
