@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!snowContainer || snowContainer.children.length >= 25) return;
     const wrapper = document.createElement('div');
     const snowflake = document.createElement('div');
-    snowflake.style.backgroundImage = `url('${Math.random() < 0.5 ? '../../img/sakura.png' : '../../img/sakura_full.png'}')`;
+    snowflake.style.backgroundImage = `url('${Math.random() < 0.5 ? 'https://japanprivateguide.com/img/sakura.png' : 'https://japanprivateguide.com/img/sakura_full.png'}')`;
     wrapper.classList.add('snow-wrapper');
     snowflake.classList.add('snowflake');
 
@@ -296,10 +296,11 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---------------- Lightbox gallery ---------------- */
   const galleryImages = [
   ...Array.from(document.querySelectorAll('.image-grid img, .sub-grid img'))
-];
-  const videoImg = new Image();
-  videoImg.src = '1.jpg';
-  galleryImages.unshift(videoImg);
+  ];
+  const firstImage = document.querySelector('.top-section img');
+  if (firstImage) {
+  galleryImages.unshift(firstImage);
+  };
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightbox-img');
   const lightboxClose = document.getElementById('lightbox-close');
@@ -308,7 +309,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentIndex = 0;
   const showImage = (index) => {
     currentIndex = index;
-    lightboxImg.src = galleryImages[index].src;
+    lightboxImg.src = galleryImages[index].getAttribute('data-src');
     lightbox.classList.remove('hidden');
   };
   const showPrev = () => showImage((currentIndex - 1 + galleryImages.length) % galleryImages.length);
