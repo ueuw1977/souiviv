@@ -15,6 +15,13 @@ a:hover {
   color:#cc0077;
 }
 
+h1 {
+  margin: 0;
+  line-height: 10px;
+  font-size: 9pt;
+  color: #ff3399;
+}
+
 .navbar {
   position: fixed;
   top: 0;
