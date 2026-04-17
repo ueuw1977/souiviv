@@ -278,20 +278,23 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ---------------- Read More toggle ---------------- */
-  const readToggle = document.getElementById('toggle-text');
-  const aboutText = document.getElementById('about-text');
+  const readToggles = document.querySelectorAll('.read-toggle');
 
-  const lang = document.documentElement.lang || 'en';
+  readToggles.forEach((readToggle) => {
+  if (readToggle.tagName.toLowerCase() === 'a') return;
 
-  readToggle?.addEventListener('click', () => {
-  aboutText?.classList.toggle('expanded');
-  const isExpanded = aboutText?.classList.contains('expanded');
+  readToggle.addEventListener('click', () => {
+    const aboutText = readToggle.previousElementSibling;
+    aboutText.classList.toggle('expanded');
+    const isExpanded = aboutText.classList.contains('expanded');
 
-  const moreText = readToggle.getAttribute(`data-more-${lang}`) || 'Read More';
-  const lessText = readToggle.getAttribute(`data-less-${lang}`) || 'Read Less';
+    const lang = document.documentElement.lang || 'en';
+    const moreText = readToggle.getAttribute(`data-more-${lang}`) || 'Read More';
+    const lessText = readToggle.getAttribute(`data-less-${lang}`) || 'Read Less';
 
-  readToggle.textContent = isExpanded ? lessText : moreText;
-});
+    readToggle.textContent = isExpanded ? lessText : moreText;
+  });
+  });
 
   /* ---------------- Lightbox gallery ---------------- */
   const galleryImages = [
