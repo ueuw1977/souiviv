@@ -459,7 +459,7 @@ transform: rotate(360deg);
   left: -12px;
   width: calc(100% + 24px);
   height: calc(100% + 24px);
-  background-image: url('img/avatar_award.png');
+  background-image: url('../img/travel/avatar_award.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
